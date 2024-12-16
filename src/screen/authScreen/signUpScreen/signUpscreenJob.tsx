@@ -3,8 +3,8 @@ import { View,Text, StyleSheet, Touchable, TouchableOpacity } from "react-native
 import CustomHeader from "../../../reusableComponents/appHeader/customHeader";
 import CustomTextInput from "../../../reusableComponents/customTextInput/customTextInput";
 import CustomButton from "../../../reusableComponents/button/button";
-import { String } from "../../../utils/string";
-import { theme } from "../../../utils";
+import { String } from "../../../utils/";
+import {theme} from '../../../utils'
 import CheckBox from "@react-native-community/checkbox";
 import * as Svg from '../../../assets/images/svg';
 
@@ -58,6 +58,7 @@ const handlePasswordChange = (input) => {
              value={password}
               onChangeText={handlePasswordChange}
             placeholder={'Password'}
+                rightIcon={<Svg.EyeOpen/>}
             />
              <View style={style.guidelinesContainer}>
                 
@@ -91,6 +92,7 @@ const handlePasswordChange = (input) => {
       </View>
            <CustomTextInput
             placeholder={'Confirm Password'}
+            rightIcon={<Svg.EyeOpen/>}
             />
             <View style={style.checkBoxContainer}>
        <TouchableOpacity
@@ -99,7 +101,7 @@ const handlePasswordChange = (input) => {
       >
         {isChecked && (
           <Svg.CheckboxActive
-          color={'green'}
+           color={theme.lightColor.purple}
           />
         )}
       </TouchableOpacity>
@@ -140,7 +142,6 @@ const style=StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
-    
     paddingHorizontal:8,
    
   },

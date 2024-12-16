@@ -8,6 +8,8 @@ export const String={
     welcomeToTechnoCrate:'Welcome to TechnoHire',
     termsAndPrivacy:'“Terms of service” and “Privacy Policy”',
     createAccount:'Create Account',
-    verifyOtp:'Verify Your Account'
-
+    verifyOtp:'Verify Your Account',
+    loginTechnohire:'Log In to TechnoHire',
+    accessAccount:'Access your account to explore jobs and opportunities',
+   forgetPassword:'Forget Password?'
 }

@@ -5,8 +5,6 @@ import CustomButton from "../../reusableComponents/button/button";
 import { String } from "../../utils/string";
 
 const JobSeekerScreen=()=>{
-
-
     const handlePress=()=>{
         console.log('pressed')
     }

@@ -5,7 +5,7 @@ import { theme } from '../../utils';
 const CustomHeader = ({ title, leftIcon, onLeftPress, rightIcon, onRightPress }) => {
   return (
     <>
-      <StatusBar backgroundColor="#ffffff"  />
+      <StatusBar backgroundColor="#FFF"  />
       <View style={styles.container}>
         <TouchableOpacity onPress={onLeftPress} style={styles.iconContainer}>
           {leftIcon}
@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#ffffff',
-    height: theme.verticalSpacing.space_84,
+    backgroundColor: '#FFF',
+    height: theme.verticalSpacing.space_100,
   paddingHorizontal:theme.horizontalSpacing.space_10
    
 

@@ -28,11 +28,14 @@ import HomeScreen from './src/screen/JobSeeker/homeScreen';
 import JobSeekerScreen from './src/screen/JobSeeker/jobSeekerScreen';
 import SignUpScreen from './src/screen/authScreen/signUpScreen/signUpscreenJob';
 import OtpOptionScreen from './src/screen/JobSeeker/otpOptionScreen';
-
-   const App=()=>{
+import EmailVerificationScreen from './src/screen/authScreen/emailVerificationjob/emailVerification'
+import PhoneVerification from './src/screen/authScreen/phoneVerificationjob/phoneVerification'
+import  VerificationSuccessScreen from './src/screen/authScreen/verificationSuccess/verificationSucces'
+import JobLoginScreen from './src/screen/authScreen/jobLoginScreen/jobLoginScreen'
+const App=()=>{
     return(
       <View>
-        <OtpOptionScreen/>
+       <JobLoginScreen/>
       </View>
     )
    }
