@@ -13,6 +13,7 @@ const CustomTextInput = ({
   leftIcon,
   onLeftIconPress,
   rightIcon,
+  key,
   onRightIconPress,
 }) => {
   return (
@@ -24,6 +25,7 @@ const CustomTextInput = ({
       )}
       <TextInput
         value={value}
+        key={key}
         onChangeText={onChangeText}
         placeholder={placeholder}
         keyboardType={keyboardType}

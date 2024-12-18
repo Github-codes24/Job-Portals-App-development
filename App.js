@@ -28,11 +28,20 @@ import HomeScreen from './src/screen/JobSeeker/homeScreen';
 import JobSeekerScreen from './src/screen/JobSeeker/jobSeekerScreen';
 import SignUpScreen from './src/screen/authScreen/signUpScreen/signUpscreenJob';
 import OtpOptionScreen from './src/screen/JobSeeker/otpOptionScreen';
+import ResetPassword from './src/screen/authScreen/forgetPasswordJob/ResetPassword';
+import ResetPasswordSuccess from './src/screen/authScreen/forgetPasswordJob/ResetPasswordSuccess';
+import ForgetPasswordScreen from './src/screen/authScreen/forgetPasswordJob/ForgetPasswordScreen';
 
    const App=()=>{
     return(
       <View>
-        <OtpOptionScreen/>
+        {/* <OtpOptionScreen/> */}
+        {/* <HomeScreen/> */}
+        {/* <JobSeekerScreen/> */}
+        {/* <SignUpScreen/> */}
+        <ResetPassword/>
+        {/* <ResetPasswordSuccess/> */}
+        {/* <ForgetPasswordScreen/> */}
       </View>
     )
    }
