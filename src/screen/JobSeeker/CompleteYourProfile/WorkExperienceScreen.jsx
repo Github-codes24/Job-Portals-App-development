@@ -6,19 +6,38 @@ import Stepper from './Stepper';
 import CustomTextInput from '../../../reusableComponents/customTextInput/customTextInput';
 import { theme } from '../../../utils';
 import CustomButton from '../../../reusableComponents/button/button';
-const WorkExperienceScreen = () => {
+const WorkExperienceScreen = ({navigation}) => {
+   
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
-    <View style={{padding: 10}}>
+    <View style={{padding: 10,backgroundColor:'white'}}>
       <CustomHeader
-            title={'Education Details'}
+            title={'Work Experience'}
               leftIcon={<Svg.ArrowBack />}
-              onLeftPress={undefined}
+              onLeftPress={()=>navigation.goBack()}
               rightIcon={undefined}
               onRightPress={undefined} />
               <Text style={styles.titleText}>Your Educational Background</Text>
               <Stepper/>   
-              <TouchableOpacity style={styles.FresherCheck} > <Svg.CheckboxInactive/> <Text style={styles.FresherCheckText}>I am a Fresher</Text> </TouchableOpacity>
-
+                <View style={styles.checkBoxContainer}>
+                          <View style={{flexDirection:"row",alignItems:"center"}}>
+                               <TouchableOpacity
+                                style={styles.checkbox}
+                                onPress={() => setIsChecked(!isChecked)}
+                              >
+                                {isChecked && (
+                                  <Svg.CheckboxActive
+                                  color={theme.lightColor.purple}
+                                  />
+                                )}
+                              </TouchableOpacity>
+                              <Text style={styles.text}>
+                                Remember me
+                              </Text>
+                              </View>
+                            </View>
+                            
               <CustomTextInput
               value={undefined}
               onChangeText={undefined}
@@ -107,6 +126,26 @@ const styles = StyleSheet.create({
     WorkingCheckText: {
         paddingLeft: theme.horizontalSpacing.space_10,
     },
+     checkBoxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
+   marginTop:20,
+    width:'100%',
+    justifyContent:"space-between"
+  },
+  checkbox: {
+    width:theme.horizontalSpacing.space_18,
+    height:theme.verticalSpacing.space_18 ,
+    borderWidth: 1,
+    borderColor: theme.lightColor.purple,
+      borderRadius:5
+  },
+  text: {
+    fontSize:theme.fontSizes.size_16,
+    color: '#00000082',
+    marginLeft: 8,
+  },
     WorkingCheck:{
         flexDirection: 'row',
         justifyContent:"flex-start",

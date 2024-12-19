@@ -15,7 +15,12 @@ export const MainRoutes = {
    JOB_SEEKER_SCREEN:'JobSeekerScreen',
    FOREGETTPASSWORD_SCREEN:'ForgetPasswordScreen',
    RESETPASSWORD:'ResetPassword',
-   RESETPASSWORD_SUCCESS:'ResetPasswordSuccess'
+   RESETPASSWORD_SUCCESS:'ResetPasswordSuccess',
+   BASIC_DETAILS_SCREEN:'BasicDetailsScreen',
+   EDUCATION_DETAILS_SCREEN:'EducationDetailsScreen',
+   STEPPER_SCREEN:'Stepper',
+   WORK_EXPERIENCE_SCREEN:'WorkExperienceScreen',
+   JOB_DASHBOARD_SCREEN:'JobDashboardScreen',
  
 };
 
@@ -31,7 +36,11 @@ export const RootStackParamList = {
     [MainRoutes.FOREGETTPASSWORD_SCREEN]: {}|undefined,
     [MainRoutes.RESETPASSWORD]: {}|undefined,
     [MainRoutes.RESETPASSWORD_SUCCESS]: {}|undefined,
-   
+    [MainRoutes.BASIC_DETAILS_SCREEN]: {}|undefined,
+    [MainRoutes.EDUCATION_DETAILS_SCREEN]: {}|undefined,
+    [MainRoutes.STEPPER_SCREEN]: {}|undefined,
+    [MainRoutes.WORK_EXPERIENCE_SCREEN]: {}|undefined,
+    [MainRoutes.JOB_DASHBOARD_SCREEN]: {}|undefined,
 };
 
 export const MainStack = createStackNavigator();

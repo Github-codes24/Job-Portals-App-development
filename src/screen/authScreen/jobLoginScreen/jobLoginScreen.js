@@ -59,6 +59,7 @@ const [isChecked, setIsChecked] = useState(false);
               <View style={{marginTop:30}}>
                <CustomButton
                title={'Login'}
+               onPress={()=>navigation.navigate(MainRoutes.JOB_DASHBOARD_SCREEN)}
                />
                </View>
                <View style={{flexDirection:'row',marginTop:theme.verticalSpacing.space_38,alignItems:"center"}}>

@@ -6,13 +6,14 @@ import { theme } from '../../../utils';
 import Stepper from './Stepper';
 import CustomTextInput from '../../../reusableComponents/customTextInput/customTextInput';
 import CustomButton from '../../../reusableComponents/button/button';
-const BasicDetailsScreen = () => {
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
+const BasicDetailsScreen = ({navigation}) => {
   return (
     <View style={styles.main} >
         <CustomHeader
         title={'Basic Details'}
               leftIcon={<Svg.ArrowBack />}
-              onLeftPress={undefined}
+              onLeftPress={()=>navigation.goBack()}
               rightIcon={undefined}
               onRightPress={undefined} />
               <Text style={styles.titleText}>Let’s Start with the Basics</Text>
@@ -85,7 +86,7 @@ const BasicDetailsScreen = () => {
               />
               <CustomButton
       title={'Save and Continue'}
-      onPress={undefined}
+      onPress={()=>navigation.navigate(MainRoutes.EDUCATION_DETAILS_SCREEN)}
       style={styles.btn}
       textStyle={undefined}
     />

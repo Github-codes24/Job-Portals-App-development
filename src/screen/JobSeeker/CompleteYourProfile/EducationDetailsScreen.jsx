@@ -6,13 +6,14 @@ import Stepper from './Stepper';
 import { theme } from '../../../utils';
 import CustomTextInput from '../../../reusableComponents/customTextInput/customTextInput';
 import CustomButton from '../../../reusableComponents/button/button';
-const EducationDetailsScreen = () => {
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
+const EducationDetailsScreen = ({navigation}) => {
   return (
     <View style={styles.main}>
         <CustomHeader
             title={'Education Details'}
               leftIcon={<Svg.ArrowBack />}
-              onLeftPress={undefined}
+              onLeftPress={()=>navigation.goBack()}
               rightIcon={undefined}
               onRightPress={undefined} />
               <Text style={styles.titleText}>Your Educational Background</Text>
@@ -65,7 +66,7 @@ const EducationDetailsScreen = () => {
               <TouchableOpacity style={styles.AddEducation}>  <Svg.AddIcon/>  <Text style={styles.AddEducationText}>Add Another Education</Text></TouchableOpacity>
               <CustomButton
       title={'Save and Continue'}
-      onPress={undefined}
+      onPress={()=>navigation.navigate(MainRoutes.WORK_EXPERIENCE_SCREEN)}
       style={styles.btn}
       textStyle={undefined}
     />
@@ -78,6 +79,8 @@ export default EducationDetailsScreen
 
 const styles = StyleSheet.create({
     main:{
+        width:'100%',
+        height:"100%",
         backgroundColor: 'white',
         padding: 10,
 

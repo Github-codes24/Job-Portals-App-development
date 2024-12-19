@@ -13,7 +13,11 @@ import VerificationSuccessScreen from '../../screen/authScreen/verificationSucce
 import ForgetPasswordScreen from '../../screen/authScreen/forgetPasswordJob/ForgetPasswordScreen';
 import ResetPasswordSuccess from '../../screen/authScreen/forgetPasswordJob/ResetPasswordSuccess';
 import ResetPassword from '../../screen/authScreen/forgetPasswordJob/ResetPassword';
-
+import BasicDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/BasicDetailsScreen';
+import EducationDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
+import Stepper from '../../screen/JobSeeker/CompleteYourProfile/Stepper';
+import WorkExperienceScreen from '../../screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
+import JobDashboardScreen from '../../screen/JobSeeker/jobDashboardScreen';
 
 import { MainRoutes } from './routeAndParamsList';
 const Stack = createStackNavigator();
@@ -35,7 +39,12 @@ const StackNavigation = () => {
           <Stack.Screen name={MainRoutes.VERIFICATION_SUCCESS_SCREEN} component={VerificationSuccessScreen} />
           <Stack.Screen name={MainRoutes.FOREGETTPASSWORD_SCREEN} component={ForgetPasswordScreen} />
            <Stack.Screen name={MainRoutes.RESETPASSWORD} component={ResetPassword} />
-            <Stack.Screen name={MainRoutes.RESETPASSWORD_SUCCESS} component={ResetPasswordSuccess} />
+           <Stack.Screen name={MainRoutes.RESETPASSWORD_SUCCESS} component={ResetPasswordSuccess} />
+          <Stack.Screen name={MainRoutes.BASIC_DETAILS_SCREEN} component={BasicDetailsScreen} />
+         <Stack.Screen name={MainRoutes.EDUCATION_DETAILS_SCREEN} component={EducationDetailsScreen} />
+          <Stack.Screen name={MainRoutes.STEPPER_SCREEN} component={Stepper} />
+          <Stack.Screen name={MainRoutes.WORK_EXPERIENCE_SCREEN} component={WorkExperienceScreen} />
+                <Stack.Screen name={MainRoutes.JOB_DASHBOARD_SCREEN} component={JobDashboardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
