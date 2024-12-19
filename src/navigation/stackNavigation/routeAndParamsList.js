@@ -11,8 +11,8 @@ export const MainRoutes = {
    JOBPHONEVERIFICATION_SCREEN:'jobPhoneVerificationScreen',
    SIGN_UP_SCREEN:'SignUpScreen',
   VERIFICATION_SUCCESS_SCREEN:'VerificationSuccessScreen',
-    VERIFY_YOUR_ACCOUNT_SCREEN:'VerifyYourAccountScreen',
-JOB_SEEKER_SCREEN:'JobSeekerScreen'
+   VERIFY_YOUR_ACCOUNT_SCREEN:'VerifyYourAccountScreen',
+ JOB_SEEKER_SCREEN:'JobSeekerScreen'
  
 };
 
