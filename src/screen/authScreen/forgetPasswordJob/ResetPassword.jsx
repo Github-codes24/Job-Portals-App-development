@@ -6,8 +6,9 @@ import { String } from '../../../utils/string';
 import { theme } from '../../../utils';
 import CustomTextInput from '../../../reusableComponents/customTextInput/customTextInput';
 import CustomButton from '../../../reusableComponents/button/button';
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
 
-const ResetPassword = () => {
+const ResetPassword = ({navigation}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const toggleShowPassword = () => {
@@ -19,7 +20,7 @@ const ResetPassword = () => {
     setShowConfirmPassword(!showConfirmPassword);
 };
   return (
-    <View>
+    <View style={{backgroundColor:"white"}}>
         <CustomHeader title={'Reset Password'} leftIcon={<Svg.ArrowBack/>} />
       <Text style={styles.SetNewpassText}>{String.SetNewPassword}</Text>
       <CustomTextInput value={undefined}
@@ -45,7 +46,7 @@ const ResetPassword = () => {
         onRightIconPress={toggleShowConfirmPassword} />
         <CustomButton
         title={'Reset Password'}
-        onPress={undefined}
+        onPress={()=>navigation.navigate(MainRoutes.RESETPASSWORD_SUCCESS)}
         style={styles.btn}
         textStyle={undefined} />
     </View>
