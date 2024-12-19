@@ -34,7 +34,8 @@ const ResetPassword = ({navigation}) => {
         secureTextEntry={!showPassword}
         onRightIconPress={toggleShowPassword} />
 
-      <CustomTextInput value={undefined}
+      <CustomTextInput
+       value={undefined}
         onChangeText={undefined}
         placeholder={'Confirm Password'}
         style={styles.Input}
