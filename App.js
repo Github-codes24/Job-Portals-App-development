@@ -1,9 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+
 
 import React from 'react';
 
@@ -27,15 +22,16 @@ import {
 import HomeScreen from './src/screen/JobSeeker/homeScreen';
 import JobSeekerScreen from './src/screen/JobSeeker/jobSeekerScreen';
 import SignUpScreen from './src/screen/authScreen/signUpScreen/signUpscreenJob';
-import OtpOptionScreen from './src/screen/JobSeeker/otpOptionScreen';
+import OtpOptionScreen from './src/screen/JobSeeker/verifyYourAccountScreen';
 import EmailVerificationScreen from './src/screen/authScreen/emailVerificationjob/emailVerification'
-import PhoneVerification from './src/screen/authScreen/phoneVerificationjob/phoneVerification'
-import  VerificationSuccessScreen from './src/screen/authScreen/verificationSuccess/verificationSucces'
+import jobPhoneVerificationScreen from './src/screen/authScreen/phoneVerificationjob/phoneVerification'
+import  VerificationSuccessScreen from './src/screen/authScreen/verificationSuccess/verificationSuccesScreen'
 import JobLoginScreen from './src/screen/authScreen/jobLoginScreen/jobLoginScreen'
+import StackNavigation from './src/navigation/stackNavigation/navigation';
 const App=()=>{
     return(
-      <View>
-       <JobLoginScreen/>
+      <View style={{flex:1}}>
+       <StackNavigation/>
       </View>
     )
    }

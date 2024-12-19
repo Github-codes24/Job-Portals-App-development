@@ -3,10 +3,11 @@ import { View,Text, StyleSheet } from "react-native";
 import { theme } from "../../utils";
 import CustomButton from "../../reusableComponents/button/button";
 import { String } from "../../utils/string";
+import { MainRoutes } from "../../navigation/stackNavigation/routeAndParamsList";
 
-const JobSeekerScreen=()=>{
+const JobSeekerScreen=({navigation})=>{
     const handlePress=()=>{
-        console.log('pressed')
+    navigation.navigate(MainRoutes.SIGN_UP_SCREEN)
     }
     
 return(

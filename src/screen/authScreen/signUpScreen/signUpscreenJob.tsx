@@ -7,9 +7,10 @@ import { String } from "../../../utils/";
 import {theme} from '../../../utils'
 import CheckBox from "@react-native-community/checkbox";
 import * as Svg from '../../../assets/images/svg';
+import { MainRoutes } from "../../../navigation/stackNavigation/routeAndParamsList";
 
 
-const SignUpScreen=()=>{
+const SignUpScreen=({navigation})=>{
 const [password, setPassword] = useState('');
   const [isValidLength, setIsValidLength] = useState(false);
   const [hasNumber, setHasNumber] = useState(false);
@@ -41,6 +42,7 @@ const handlePasswordChange = (input) => {
             <CustomHeader
             title='Create Account'
             leftIcon={<Svg.ArrowBack/>}
+            onLeftPress={()=>navigation.goBack()}
             />
             <CustomTextInput
             placeholder={'Full Name'}
@@ -115,7 +117,7 @@ const handlePasswordChange = (input) => {
             <CustomButton
             title={String.createAccount}
          style={{marginTop:theme.verticalSpacing.space_20,}}
-                  
+             onPress={()=>navigation.navigate(MainRoutes.VERIFY_YOUR_ACCOUNT_SCREEN)}     
             />
             
     <View style={{ flexDirection: 'row', alignItems: 'center',width:'100%',marginTop:theme.verticalSpacing.space_18,justifyContent:'center' }}>
