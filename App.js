@@ -19,14 +19,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import HomeScreen from './src/screen/JobSeeker/homeScreen';
-import JobSeekerScreen from './src/screen/JobSeeker/jobSeekerScreen';
-import SignUpScreen from './src/screen/authScreen/signUpScreen/signUpscreenJob';
-import OtpOptionScreen from './src/screen/JobSeeker/verifyYourAccountScreen';
-import EmailVerificationScreen from './src/screen/authScreen/emailVerificationjob/emailVerification'
-import jobPhoneVerificationScreen from './src/screen/authScreen/phoneVerificationjob/phoneVerification'
-import  VerificationSuccessScreen from './src/screen/authScreen/verificationSuccess/verificationSuccesScreen'
-import JobLoginScreen from './src/screen/authScreen/jobLoginScreen/jobLoginScreen'
+
 import StackNavigation from './src/navigation/stackNavigation/navigation';
 const App=()=>{
     return(

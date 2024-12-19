@@ -12,7 +12,10 @@ export const MainRoutes = {
    SIGN_UP_SCREEN:'SignUpScreen',
   VERIFICATION_SUCCESS_SCREEN:'VerificationSuccessScreen',
    VERIFY_YOUR_ACCOUNT_SCREEN:'VerifyYourAccountScreen',
- JOB_SEEKER_SCREEN:'JobSeekerScreen'
+   JOB_SEEKER_SCREEN:'JobSeekerScreen',
+   FOREGETTPASSWORD_SCREEN:'ForgetPasswordScreen',
+   RESETPASSWORD:'ResetPassword',
+   RESETPASSWORD_SUCCESS:'ResetPasswordSuccess'
  
 };
 
@@ -25,6 +28,9 @@ export const RootStackParamList = {
     [MainRoutes.JOBPHONEVERIFICATION_SCREEN]: {}|undefined,
     [MainRoutes.SIGN_UP_SCREEN]: {}|undefined,
      [MainRoutes.VERIFICATION_SUCCESS_SCREEN]: {}|undefined,
+    [MainRoutes.FOREGETTPASSWORD_SCREEN]: {}|undefined,
+    [MainRoutes.RESETPASSWORD]: {}|undefined,
+    [MainRoutes.RESETPASSWORD_SUCCESS]: {}|undefined,
    
 };
 

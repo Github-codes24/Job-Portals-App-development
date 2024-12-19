@@ -50,7 +50,7 @@ const [isChecked, setIsChecked] = useState(false);
                 </Text>
                 </View>
                 <TouchableOpacity
-                //  onPress={()=>MainRoutes.}
+                 onPress={()=>navigation.navigate(MainRoutes.FOREGETTPASSWORD_SCREEN)}
                 >
                   <Text style={style.forgetPasswordText}>{String.forgetPassword}</Text>
                 </TouchableOpacity>

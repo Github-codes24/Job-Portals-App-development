@@ -6,14 +6,15 @@ import CustomTextInput from '../../../reusableComponents/customTextInput/customT
 import { theme } from '../../../utils';
 import CustomButton from '../../../reusableComponents/button/button';
 import { String } from '../../../utils/string';
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
 
-const ForgetPasswordScreen = () => {
+const ForgetPasswordScreen = ({navigation}) => {
   return (
-    <View style={{padding:10}}>
+    <View style={{padding:10,backgroundColor:"white"}}>
     <CustomHeader
       title={'Forget Password'}
       leftIcon={<Svg.ArrowBack />}
-      onLeftPress={undefined}
+      onLeftPress={()=>navigation.goBack()}
       rightIcon={undefined}
       onRightPress={undefined}
     />
@@ -35,7 +36,7 @@ const ForgetPasswordScreen = () => {
     </Text>
     <CustomButton
       title={'Reset Password'}
-      onPress={undefined}
+      onPress={()=>navigation.navigate(MainRoutes.RESETPASSWORD)}
       style={styles.btn}
       textStyle={undefined}
     />
