@@ -11,5 +11,10 @@ export const String={
     verifyOtp:'Verify Your Account',
     loginTechnohire:'Log In to TechnoHire',
     accessAccount:'Access your account to explore jobs and opportunities',
-   forgetPassword:'Forget Password?'
+   forgetPassword:'Forget Password?',
+    ForgetPassword:'Enter your registered email or phone number to receive a password reset link',
+    SetNewPassword:'Set a new password to access your account',
+    ResetPasswordSuccess:'Your password has been successfully reset!',
+    LoginWithNewPassword:'You can now log in with your new password'
+
 }

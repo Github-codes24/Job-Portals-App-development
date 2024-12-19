@@ -9,6 +9,9 @@ import Success from "./common/success";
 import EyeOpen from './common/eyeopen'
 import LinkDin from './common/linkDin'
 import GoogleIcon from './common/googleIcon'
+import BellIcon from './common/BellIcon';
+import OpenEye from './common/OpenEye';
+import CloseEye from './common/CloseEye';
 export {
   ArrowBack,
  CheckboxActive,
@@ -20,5 +23,8 @@ export {
  Success,
  EyeOpen,
  LinkDin,
- GoogleIcon
+ GoogleIcon,
+ BellIcon,
+ OpenEye,
+ CloseEye
 };

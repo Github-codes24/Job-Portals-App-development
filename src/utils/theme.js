@@ -9,7 +9,8 @@ const theme = {
     alertColor: '#FD5F5F',
     lightGrayColor: '#D9D9D9',
     purple:'#7900BA',
-   inputGray:'#D3D3D39C'
+   inputGray:'#D3D3D39C',
+   blackColor:'#272727'
    
   },
 
@@ -117,6 +118,7 @@ const theme = {
     space_260: hp(260),
    space_230: hp(230),
    
+   space_320: hp(320),
   },
   horizontalSpacing: {
     space_2: wp(2),

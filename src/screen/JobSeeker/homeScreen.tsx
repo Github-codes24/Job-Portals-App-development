@@ -24,7 +24,7 @@ return(
         title={String.employer}
         textStyle={{ fontFamily: theme.fontFamily.notoSans.medium_500 }}
         style={{marginTop:theme.verticalSpacing.space_34}}
-                 onPress={() => navigation.navigate(MainRoutes.JOB_SEEKER_SCREEN)}
+        onPress={() => navigation.navigate(MainRoutes.JOB_SEEKER_SCREEN)}
         />
          <Text style={style.text}>
 
