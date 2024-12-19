@@ -10,7 +10,7 @@ const VerificationScreen = ({
   placeholder,
   onResend,
   onVerify,
-  timer = 120
+  timer=30
 }) => {
   const [timeLeft, setTimeLeft] = useState(timer);
      const [inputValue, setInputValue] = useState('');

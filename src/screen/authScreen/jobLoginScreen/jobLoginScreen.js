@@ -7,10 +7,11 @@ import CustomTextInput from '../../../reusableComponents/customTextInput/customT
 import * as Svg from '../../../assets/images/svg';
 import CustomButton from '../../../reusableComponents/button/button';
 import SocialLoginButtons from '../../../reusableComponents/socialLogin/socialLogin';
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
   
 
 
-const JobLoginScreen=()=>{
+const JobLoginScreen=({navigation})=>{
 
 const [isChecked, setIsChecked] = useState(false);
 
@@ -48,7 +49,9 @@ const [isChecked, setIsChecked] = useState(false);
                   Remember me
                 </Text>
                 </View>
-                <TouchableOpacity>
+                <TouchableOpacity
+                //  onPress={()=>MainRoutes.}
+                >
                   <Text style={style.forgetPasswordText}>{String.forgetPassword}</Text>
                 </TouchableOpacity>
                

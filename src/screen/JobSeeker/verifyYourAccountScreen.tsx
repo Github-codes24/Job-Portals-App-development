@@ -2,16 +2,17 @@ import React from "react";
 import { View,Text, StyleSheet, TouchableNativeFeedbackComponent, TouchableOpacity } from "react-native";
 import CustomHeader from "../../reusableComponents/appHeader/customHeader";
 import { String } from "../../utils/string";
-
 import * as Svg from '../../assets/images/svg';
 import { theme } from "../../utils";
 import CustomButton from "../../reusableComponents/button/button";
-const OtpOptionScreen=()=>{
+import { MainRoutes } from "../../navigation/stackNavigation/routeAndParamsList";
+const VerifyYourAccountScreen=({navigation})=>{
 return(
     <View style={styles.main}>
         <CustomHeader
         title={String.verifyOtp}
         leftIcon={<Svg.ArrowBack/>}
+            onLeftPress={()=>navigation.goBack()}
         />
         <View style={styles.otpmainView}>
        <Text style={styles.text}>{'Where should we send your verification code?'}</Text>
@@ -26,7 +27,9 @@ return(
 
         
          </View>
-       <TouchableOpacity style={styles.selectPhoneButton}>
+       <TouchableOpacity style={styles.selectPhoneButton}
+        onPress={() => navigation.navigate(MainRoutes.JOBPHONEVERIFICATION_SCREEN)}
+       >
            <Text style={styles.textStyle}>Select phone</Text>
          </TouchableOpacity>
           </View>
@@ -42,7 +45,9 @@ return(
 
         
          </View>
-       <TouchableOpacity style={styles.selectPhoneButton}>
+       <TouchableOpacity style={styles.selectPhoneButton}
+       onPress={()=>navigation.navigate(MainRoutes.EMAILVERIFICATION_SCREEN)}
+       >
            <Text style={styles.textStyle}>Select Email</Text>
          </TouchableOpacity>
           </View>
@@ -115,4 +120,4 @@ color:theme.lightColor.gray,
 textAlign:"center"
 }
 });
-export default OtpOptionScreen;
+export default VerifyYourAccountScreen;

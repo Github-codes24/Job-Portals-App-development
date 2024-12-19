@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import CustomButton from "../../../reusableComponents/button/button";
 import * as Svg from '../../../assets/images/svg';
 import {theme} from '../../../utils'
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
 
-const VerificationSuccessScreen = ({ 
-  type, 
-  onPressLogin 
-}) => {
+const VerificationSuccessScreen =({ route,navigation
+   })=>{
+
+  const { type } = route.params;  // Access type from route.params
+
+  console.log('Type:', type);
+
   const message =
     type === 'email'
       ? 'Your email has been successfully verified. You’re all set to explore and apply for your dream job.'
       : 'Your phone has been successfully verified. You’re all set to explore and apply for your dream job.';
+  
 
   return (
     <View style={styles.container}>
@@ -21,6 +26,7 @@ const VerificationSuccessScreen = ({
      <CustomButton
      style={{marginTop:30}}
      title={'Login'}
+     onPress={()=>navigation.navigate(MainRoutes.JOBLOGIN_SCREEN)}
      />
     </View>
   );

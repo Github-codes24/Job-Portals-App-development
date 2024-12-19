@@ -3,9 +3,10 @@ import { View,Text, StyleSheet,Image,  TouchableOpacity } from "react-native";
 import CustomButton from "../../reusableComponents/button/button";
 import { theme } from "../../utils";
 import { String } from "../../utils/string";
+import { MainRoutes } from "../../navigation/stackNavigation/routeAndParamsList";
 
 
-const HomeScreen=()=>{
+const HomeScreen=({navigation})=>{
 return(
     <View style={style.main}>
        <Image
@@ -17,11 +18,13 @@ return(
         title={String.jobSeeker}
         textStyle={{ fontFamily: theme.fontFamily.notoSans.medium_500 }}
          style={{marginTop:theme.verticalSpacing.space_54}}
+         onPress={() => navigation.navigate(MainRoutes.JOB_SEEKER_SCREEN)}
         />
          <CustomButton
         title={String.employer}
         textStyle={{ fontFamily: theme.fontFamily.notoSans.medium_500 }}
         style={{marginTop:theme.verticalSpacing.space_34}}
+                 onPress={() => navigation.navigate(MainRoutes.JOB_SEEKER_SCREEN)}
         />
          <Text style={style.text}>
 
@@ -36,7 +39,7 @@ const style=StyleSheet.create({
     main:{
          width:"100%",
          height:"100%",
-        backgroundColor:theme.lightColor.white,
+        backgroundColor:'white',
         alignItems:'center'
     },
     imageStyle:{
