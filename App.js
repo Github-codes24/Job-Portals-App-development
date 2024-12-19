@@ -31,6 +31,11 @@ import OtpOptionScreen from './src/screen/JobSeeker/otpOptionScreen';
 import ResetPassword from './src/screen/authScreen/forgetPasswordJob/ResetPassword';
 import ResetPasswordSuccess from './src/screen/authScreen/forgetPasswordJob/ResetPasswordSuccess';
 import ForgetPasswordScreen from './src/screen/authScreen/forgetPasswordJob/ForgetPasswordScreen';
+import Stepper from './src/screen/JobSeeker/CompleteYourProfile/Stepper';
+import BasicDetailsScreen from './src/screen/JobSeeker/CompleteYourProfile/BasicDetailsScreen';
+import EducationDetailsScreen from './src/screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
+import WorkExperienceScreen from './src/screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
+// import CompleteYourProfileScreen from './src/screen/JobSeeker/CompleteYourProfile/CompleteYourProfileScreen';
 
    const App=()=>{
     return(
@@ -39,9 +44,16 @@ import ForgetPasswordScreen from './src/screen/authScreen/forgetPasswordJob/Forg
         {/* <HomeScreen/> */}
         {/* <JobSeekerScreen/> */}
         {/* <SignUpScreen/> */}
-        <ResetPassword/>
+
+        {/* nikhil created screens */}
+
+        {/* <ResetPassword/> */}
         {/* <ResetPasswordSuccess/> */}
         {/* <ForgetPasswordScreen/> */}
+        {/* <Stepper/> */}
+        {/* <BasicDetailsScreen/> */}
+        {/* <EducationDetailsScreen/> */}
+        <WorkExperienceScreen/>
       </View>
     )
    }

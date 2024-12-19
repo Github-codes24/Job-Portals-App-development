@@ -7,6 +7,8 @@ import MobileIcon from "./common/mobileIcon";
 import BellIcon from './common/BellIcon';
 import OpenEye from './common/OpenEye';
 import CloseEye from './common/CloseEye';
+import AddIcon from './common/AddIcon';
+
 export {
   ArrowBack,
  CheckboxActive,
@@ -16,5 +18,6 @@ export {
  MobileIcon,
  BellIcon,
  OpenEye,
- CloseEye
+ CloseEye,
+ AddIcon,
 };
