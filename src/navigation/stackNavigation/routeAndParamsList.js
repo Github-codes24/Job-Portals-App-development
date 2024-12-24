@@ -23,7 +23,10 @@ export const MainRoutes = {
    SKILLS_AND_PREFERANCES: 'SkillsAndPreferances',
    UPLOAD_DOCUMENTS: 'UploadDocuments',
    YOU_ARE_ALL_SET: 'YouAreAllSet',
- 
+   JOB_DASHBOARD_SCREEN:'jobDashboardScreen',
+ EDUCATION_DETAILS_SCREEN:'EducationDetailsScreen',
+ BASIC_DETAILS_SCREEN:'BasicDetailsScreen',
+ WORK_EXPERIENCE_SCREEN:'WorkExperienceScreen'
 };
 
 export const RootStackParamList = {
@@ -45,6 +48,10 @@ export const RootStackParamList = {
     [MainRoutes.SKILLS_AND_PREFERANCES]: {}|undefined,
     [MainRoutes.UPLOAD_DOCUMENTS]: {}|undefined,
     [MainRoutes.YOU_ARE_ALL_SET]: {}|undefined,
+     [MainRoutes.JOB_DASHBOARD_SCREEN]: {}|undefined,
+    [MainRoutes.EDUCATION_DETAILS_SCREEN]: {}|undefined,
+    [MainRoutes.BASIC_DETAILS_SCREEN]: {}|undefined,
+      [MainRoutes.WORK_EXPERIENCE_SCREEN]: {}|undefined,
    
 };
 

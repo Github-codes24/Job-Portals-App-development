@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import * as Svg from '../../assets/images/svg'; // Import the SVGs
+import * as Svg from '../../assets/images/svg'; 
 import { theme } from "../../utils";
 
 const JobCard = ({ title, count, backgroundImage, topRightImage, color, onPress }) => {
   return (
+    <>
     <TouchableOpacity style={[styles.card, { backgroundColor: color }]} onPress={onPress}>
       {/* Top-right small Image or SVG */}
       {topRightImage ? (
@@ -22,6 +23,7 @@ const JobCard = ({ title, count, backgroundImage, topRightImage, color, onPress 
       <Text style={styles.titleText}>{title}</Text>
       <Text style={styles.viewText}>View</Text>
     </TouchableOpacity>
+    </>
   );
 };
 

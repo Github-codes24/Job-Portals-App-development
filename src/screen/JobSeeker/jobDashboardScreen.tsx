@@ -5,6 +5,7 @@ import * as Svg from "../../assets/images/svg";
 import { theme } from "../../utils";
 import JobCard from "../../reusableComponents/jobCard/jobCard";
 import ProfileCompletionCard from "../../reusableComponents/ProfileCompletionCard/ProfileCompletionCard";
+import { MainRoutes } from "../../navigation/stackNavigation/routeAndParamsList";
 
 const JobDashboardScreen = ({ navigation }) => {
 
@@ -83,6 +84,7 @@ const JobDashboardScreen = ({ navigation }) => {
 </View>
 {/* ---------------------------------------------------------------------- */}
     <ProfileCompletionCard
+    onPress={()=>navigation.navigate(MainRoutes.BASIC_DETAILS_SCREEN)}
     />
     
     </View>
