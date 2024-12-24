@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Dimensions} from 'react-native';
 import Svg, {Path, Rect} from 'react-native-svg';
 
-const BellIcon = ({size = 24, color = 'black'}) => {
+const BellIcon = ({size = 24, color = '#5E1A82'}) => {
   return (
     <Svg
       width={size}

@@ -19,6 +19,24 @@ const WorkExperienceScreen = ({navigation}) => {
               onRightPress={undefined} />
               <Text style={styles.titleText}>Tell Us About Your Work Experience</Text>
               <Stepper/>   
+                <View style={styles.checkBoxContainer}>
+                          <View style={{flexDirection:"row",alignItems:"center"}}>
+                               <TouchableOpacity
+                                style={styles.checkbox}
+                                onPress={() => setIsChecked(!isChecked)}
+                              >
+                                {isChecked && (
+                                  <Svg.CheckboxActive
+                                  color={theme.lightColor.purple}
+                                  />
+                                )}
+                              </TouchableOpacity>
+                              <Text style={styles.text}>
+                                Remember me
+                              </Text>
+                              </View>
+                            </View>
+                            
               <TouchableOpacity style={styles.FresherCheck} onPress={ () => { SetiAmFresher(!iAmFresher)}} > { iAmFresher ? (<Svg.CheckboxActive/> ): ( <Svg.CheckboxInactive/> )} <Text style={styles.FresherCheckText}>I am a Fresher</Text> </TouchableOpacity>
 
               <CustomTextInput
@@ -109,6 +127,26 @@ const styles = StyleSheet.create({
     WorkingCheckText: {
         paddingLeft: theme.horizontalSpacing.space_10,
     },
+     checkBoxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
+   marginTop:20,
+    width:'100%',
+    justifyContent:"space-between"
+  },
+  checkbox: {
+    width:theme.horizontalSpacing.space_18,
+    height:theme.verticalSpacing.space_18 ,
+    borderWidth: 1,
+    borderColor: theme.lightColor.purple,
+      borderRadius:5
+  },
+  text: {
+    fontSize:theme.fontSizes.size_16,
+    color: '#00000082',
+    marginLeft: 8,
+  },
     WorkingCheck:{
         flexDirection: 'row',
         justifyContent:"flex-start",

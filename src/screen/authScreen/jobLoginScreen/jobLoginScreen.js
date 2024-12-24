@@ -49,6 +49,8 @@ const [isChecked, setIsChecked] = useState(false);
                   Remember me
                 </Text>
                 </View>
+              
+              
                 <TouchableOpacity
                  onPress={()=>navigation.navigate(MainRoutes.FOREGETTPASSWORD_SCREEN)}
                 >
@@ -59,6 +61,7 @@ const [isChecked, setIsChecked] = useState(false);
               <View style={{marginTop:30}}>
                <CustomButton
                title={'Login'}
+               onPress={()=>navigation.navigate(MainRoutes.JOB_DASHBOARD_SCREEN)}
                />
                </View>
                <View style={{flexDirection:'row',marginTop:theme.verticalSpacing.space_38,alignItems:"center"}}>
