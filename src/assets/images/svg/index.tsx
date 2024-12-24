@@ -13,13 +13,9 @@ import BellIcon from './common/BellIcon';
 import OpenEye from './common/OpenEye';
 import CloseEye from './common/CloseEye';
 import AddIcon from './common/AddIcon';
-import SimpleBellIcon from "./common/simpleBellIcon";
-import ProfileIcon from "./common/profileIcon";
-import MessageIcon from "./common/messageIcon";
-import Drower from "./common/drower";
-import SearchIcon from "./common/searchIcon";
-import DotIcon from "./common/dotIcon";
-import CircleArrow from "./common/circleArrow";
+import ArrowNext from './common/ArrowNext';
+import UploadIcon from './common/UploadIcon';
+
 export {
   ArrowBack,
  CheckboxActive,
@@ -36,11 +32,6 @@ export {
  OpenEye,
  CloseEye,
  AddIcon,
- SimpleBellIcon,
- ProfileIcon,
- MessageIcon,
- Drower,
- SearchIcon,
- DotIcon,
- CircleArrow
+ ArrowNext,
+ UploadIcon,
 };

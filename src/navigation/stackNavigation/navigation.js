@@ -20,6 +20,13 @@ import WorkExperienceScreen from '../../screen/JobSeeker/CompleteYourProfile/Wor
 import JobDashboardScreen from '../../screen/JobSeeker/jobDashboardScreen';
 
 import { MainRoutes } from './routeAndParamsList';
+import BasicDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/BasicDetailsScreen';
+import EducationDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
+import WorkExperienceScreen from '../../screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
+import CertificationScreen from '../../screen/JobSeeker/CompleteYourProfile/CertificationScreen';
+import SkillsAndPreferencesScreen from '../../screen/JobSeeker/CompleteYourProfile/SkillsAndPreferencesScreen';
+import UploadDocumentsScreen from '../../screen/JobSeeker/CompleteYourProfile/UploadDocumentsScreen';
+import YouAreAllSetScreen from '../../screen/JobSeeker/CompleteYourProfile/YouAreAllSetScreen';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -45,6 +52,14 @@ const StackNavigation = () => {
           <Stack.Screen name={MainRoutes.STEPPER_SCREEN} component={Stepper} />
           <Stack.Screen name={MainRoutes.WORK_EXPERIENCE_SCREEN} component={WorkExperienceScreen} />
                 <Stack.Screen name={MainRoutes.JOB_DASHBOARD_SCREEN} component={JobDashboardScreen} />
+            <Stack.Screen name={MainRoutes.RESETPASSWORD_SUCCESS} component={ResetPasswordSuccess} />
+            <Stack.Screen name={MainRoutes.BASIC_DETAILS} component={BasicDetailsScreen} />
+            <Stack.Screen name={MainRoutes.EDUCATION_DETAILS} component={EducationDetailsScreen} />
+            <Stack.Screen name={MainRoutes.WORKEXPERIENCE_DETAILS} component={WorkExperienceScreen} />
+            <Stack.Screen name={MainRoutes.CERTIFICATION_DETAILS} component={CertificationScreen} />
+            <Stack.Screen name={MainRoutes.SKILLS_AND_PREFERANCES} component={SkillsAndPreferencesScreen} />
+            <Stack.Screen name={MainRoutes.UPLOAD_DOCUMENTS} component={UploadDocumentsScreen} />
+            <Stack.Screen name={MainRoutes.YOU_ARE_ALL_SET} component={YouAreAllSetScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
