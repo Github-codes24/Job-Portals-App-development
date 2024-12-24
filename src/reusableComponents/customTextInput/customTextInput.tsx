@@ -13,7 +13,10 @@ const CustomTextInput = ({
   leftIcon,
   onLeftIconPress,
   rightIcon,
-  key,
+  numberOfLines,
+  multiline = false,
+  editable= true,
+  // key,
   onRightIconPress,
 }) => {
   return (
@@ -25,9 +28,12 @@ const CustomTextInput = ({
       )}
       <TextInput
         value={value}
-        key={key}
+        // key={key}
+        editable={editable}
         onChangeText={onChangeText}
         placeholder={placeholder}
+        numberOfLines={numberOfLines}
+        multiline={multiline}
         keyboardType={keyboardType}
         secureTextEntry={secureTextEntry}
         style={[styles.input, inputStyle]}

@@ -15,7 +15,14 @@ export const MainRoutes = {
    JOB_SEEKER_SCREEN:'JobSeekerScreen',
    FOREGETTPASSWORD_SCREEN:'ForgetPasswordScreen',
    RESETPASSWORD:'ResetPassword',
-   RESETPASSWORD_SUCCESS:'ResetPasswordSuccess'
+   RESETPASSWORD_SUCCESS:'ResetPasswordSuccess',
+   BASIC_DETAILS:'BasicDetails',
+   EDUCATION_DETAILS:'EducationDetails',
+   WORKEXPERIENCE_DETAILS:'WorkExperienceDetails',
+   CERTIFICATION_DETAILS: 'CertificationDetails',
+   SKILLS_AND_PREFERANCES: 'SkillsAndPreferances',
+   UPLOAD_DOCUMENTS: 'UploadDocuments',
+   YOU_ARE_ALL_SET: 'YouAreAllSet',
  
 };
 
@@ -31,6 +38,13 @@ export const RootStackParamList = {
     [MainRoutes.FOREGETTPASSWORD_SCREEN]: {}|undefined,
     [MainRoutes.RESETPASSWORD]: {}|undefined,
     [MainRoutes.RESETPASSWORD_SUCCESS]: {}|undefined,
+    [MainRoutes.BASIC_DETAILS]: {}|undefined,
+    [MainRoutes.EDUCATION_DETAILS]: {}|undefined,
+    [MainRoutes.WORKEXPERIENCE_DETAILS]: {}|undefined,
+    [MainRoutes.CERTIFICATION_DETAILS]: {}|undefined,
+    [MainRoutes.SKILLS_AND_PREFERANCES]: {}|undefined,
+    [MainRoutes.UPLOAD_DOCUMENTS]: {}|undefined,
+    [MainRoutes.YOU_ARE_ALL_SET]: {}|undefined,
    
 };
 

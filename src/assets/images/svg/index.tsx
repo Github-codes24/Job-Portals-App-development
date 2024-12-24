@@ -12,6 +12,10 @@ import GoogleIcon from './common/googleIcon'
 import BellIcon from './common/BellIcon';
 import OpenEye from './common/OpenEye';
 import CloseEye from './common/CloseEye';
+import AddIcon from './common/AddIcon';
+import ArrowNext from './common/ArrowNext';
+import UploadIcon from './common/UploadIcon';
+
 export {
   ArrowBack,
  CheckboxActive,
@@ -26,5 +30,8 @@ export {
  GoogleIcon,
  BellIcon,
  OpenEye,
- CloseEye
+ CloseEye,
+ AddIcon,
+ ArrowNext,
+ UploadIcon,
 };

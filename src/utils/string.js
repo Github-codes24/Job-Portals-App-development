@@ -1,3 +1,4 @@
+
 export const String={
     jobSeeker:'I’m a Job Seeker',
     employer:'I’m a Employer',
@@ -15,6 +16,8 @@ export const String={
     ForgetPassword:'Enter your registered email or phone number to receive a password reset link',
     SetNewPassword:'Set a new password to access your account',
     ResetPasswordSuccess:'Your password has been successfully reset!',
-    LoginWithNewPassword:'You can now log in with your new password'
+    LoginWithNewPassword:'You can now log in with your new password',
+    UploadDocumentsubTitle:'Upload your resume, photo, and additional documents (optional)',
+    YouAreAllSetSubTitle: 'Your profile is now 100% complete. Start exploring job opportunities tailored to you.'
 
 }
