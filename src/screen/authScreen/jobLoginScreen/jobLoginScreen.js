@@ -49,6 +49,8 @@ const [isChecked, setIsChecked] = useState(false);
                   Remember me
                 </Text>
                 </View>
+              
+              
                 <TouchableOpacity
                  onPress={()=>navigation.navigate(MainRoutes.FOREGETTPASSWORD_SCREEN)}
                 >

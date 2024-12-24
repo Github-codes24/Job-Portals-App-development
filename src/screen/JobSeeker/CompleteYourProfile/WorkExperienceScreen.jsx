@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import React,{useState} from 'react';
 import CustomHeader from '../../../reusableComponents/appHeader/customHeader';
 import * as Svg from '../../../assets/images/svg';
 import Stepper from './Stepper';
