@@ -1,23 +1,25 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import CustomHeader from '../../../reusableComponents/appHeader/customHeader';
 import * as Svg from '../../../assets/images/svg';
 import Stepper from './Stepper';
 import CustomTextInput from '../../../reusableComponents/customTextInput/customTextInput';
 import { theme } from '../../../utils';
 import CustomButton from '../../../reusableComponents/button/button';
-const WorkExperienceScreen = () => {
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
+const WorkExperienceScreen = ({navigation}) => {
+  const [iAmFresher, SetiAmFresher] = useState(false)
   return (
-    <View style={{padding: 10}}>
+    <View style={{padding: 10, backgroundColor:'white'}}>
       <CustomHeader
-            title={'Education Details'}
+            title={'Work Experience'}
               leftIcon={<Svg.ArrowBack />}
-              onLeftPress={undefined}
+              onLeftPress={() => { navigation.goBack()}}
               rightIcon={undefined}
               onRightPress={undefined} />
-              <Text style={styles.titleText}>Your Educational Background</Text>
+              <Text style={styles.titleText}>Tell Us About Your Work Experience</Text>
               <Stepper/>   
-              <TouchableOpacity style={styles.FresherCheck} > <Svg.CheckboxInactive/> <Text style={styles.FresherCheckText}>I am a Fresher</Text> </TouchableOpacity>
+              <TouchableOpacity style={styles.FresherCheck} onPress={ () => { SetiAmFresher(!iAmFresher)}} > { iAmFresher ? (<Svg.CheckboxActive/> ): ( <Svg.CheckboxInactive/> )} <Text style={styles.FresherCheckText}>I am a Fresher</Text> </TouchableOpacity>
 
               <CustomTextInput
               value={undefined}
@@ -63,7 +65,7 @@ const WorkExperienceScreen = () => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-            <TouchableOpacity style={styles.WorkingCheck} > <Svg.CheckboxActive/> <Text style={styles.WorkingCheckText}>Currently Working Here</Text> </TouchableOpacity>
+            <TouchableOpacity style={styles.WorkingCheck} > <Svg.CheckboxInactive/> <Text style={styles.WorkingCheckText}>Currently Working Here</Text> </TouchableOpacity>
             <CustomTextInput
               value={undefined}
               onChangeText={undefined}
@@ -80,7 +82,7 @@ const WorkExperienceScreen = () => {
              <TouchableOpacity style={styles.AddAnotherJob} > <Svg.AddIcon/> <Text style={styles.AddAnotherJobText}> Add Another Job</Text> </TouchableOpacity>
              <CustomButton
       title={'Save and Continue'}
-      onPress={undefined}
+      onPress={() => navigation.navigate(MainRoutes.CERTIFICATION_DETAILS)}
       style={styles.btn}
       textStyle={undefined}
     />

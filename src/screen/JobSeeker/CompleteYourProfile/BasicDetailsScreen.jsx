@@ -6,18 +6,20 @@ import { theme } from '../../../utils';
 import Stepper from './Stepper';
 import CustomTextInput from '../../../reusableComponents/customTextInput/customTextInput';
 import CustomButton from '../../../reusableComponents/button/button';
-const BasicDetailsScreen = () => {
+import CustomDropDownTextInput from '../../../reusableComponents/customDropDownTextInput/CustomDropDownTextInput';
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
+const BasicDetailsScreen = ({navigation}) => {
   return (
     <View style={styles.main} >
         <CustomHeader
         title={'Basic Details'}
               leftIcon={<Svg.ArrowBack />}
-              onLeftPress={undefined}
+              onLeftPress={() => {navigation.goBack()}}
               rightIcon={undefined}
               onRightPress={undefined} />
               <Text style={styles.titleText}>Let’s Start with the Basics</Text>
               <Stepper/>
-              <CustomTextInput 
+              <CustomTextInput
               value={undefined}
               onChangeText={undefined}
               placeholder={'Full Name'}
@@ -28,7 +30,7 @@ const BasicDetailsScreen = () => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-              <CustomTextInput 
+              <CustomTextInput
               value={undefined}
               onChangeText={undefined}
               placeholder={'Date Of Birth'}
@@ -39,10 +41,14 @@ const BasicDetailsScreen = () => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-              <CustomTextInput 
+              <CustomDropDownTextInput
               value={undefined}
-              onChangeText={undefined}
+              onChange={undefined}
               placeholder={'Gender'}
+              data={[ 
+                { label: 'Male', value: 'Male' },
+                { label: 'Female', value: 'Female' },
+                { label: 'Other', value: 'Other' }]}
               // style={styles.Input}
               inputStyle={undefined}
               leftIcon={undefined}
@@ -50,7 +56,7 @@ const BasicDetailsScreen = () => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-              <CustomTextInput 
+              <CustomTextInput
               value={undefined}
               onChangeText={undefined}
               placeholder={'Contact Number'}
@@ -61,7 +67,7 @@ const BasicDetailsScreen = () => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-              <CustomTextInput 
+              <CustomTextInput
               value={undefined}
               onChangeText={undefined}
               placeholder={'Email Address'}
@@ -72,7 +78,7 @@ const BasicDetailsScreen = () => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-              <CustomTextInput 
+              <CustomTextInput
               value={undefined}
               onChangeText={undefined}
               placeholder={'Location'}
@@ -85,15 +91,17 @@ const BasicDetailsScreen = () => {
               />
               <CustomButton
       title={'Save and Continue'}
-      onPress={undefined}
+      onPress={()=>navigation.navigate(MainRoutes.EDUCATION_DETAILS)}
+      // onPress={()=>navigation.navigate(MainRoutes.RESETPASSWORD_SUCCESS)}
+      
       style={styles.btn}
       textStyle={undefined}
     />
     </View>
-  )
-}
+  );
+};
 
-export default BasicDetailsScreen
+export default BasicDetailsScreen;
 
 const styles = StyleSheet.create({
     main:{
@@ -101,13 +109,13 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     titleText:{
-        color: theme.lightColor.gray,
-        textAlign: 'center',
-        marginTop: theme.verticalSpacing.space_12,
-        fontSize: theme.fontSizes.size_18,
+      fontSize: theme.fontSizes.size_18,
+      color: theme.lightColor.gray,
+      textAlign:'center',
+      marginTop: theme.verticalSpacing.space_12,
     },
     btn:{
         marginTop: theme.verticalSpacing.space_26,
-    }
+    },
 
-})
+});

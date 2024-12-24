@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 
 import React from 'react';
 
@@ -24,36 +18,14 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import HomeScreen from './src/screen/JobSeeker/homeScreen';
-import JobSeekerScreen from './src/screen/JobSeeker/jobSeekerScreen';
-import SignUpScreen from './src/screen/authScreen/signUpScreen/signUpscreenJob';
-import OtpOptionScreen from './src/screen/JobSeeker/otpOptionScreen';
-import ResetPassword from './src/screen/authScreen/forgetPasswordJob/ResetPassword';
-import ResetPasswordSuccess from './src/screen/authScreen/forgetPasswordJob/ResetPasswordSuccess';
-import ForgetPasswordScreen from './src/screen/authScreen/forgetPasswordJob/ForgetPasswordScreen';
-import Stepper from './src/screen/JobSeeker/CompleteYourProfile/Stepper';
+
+import StackNavigation from './src/navigation/stackNavigation/navigation';
 import BasicDetailsScreen from './src/screen/JobSeeker/CompleteYourProfile/BasicDetailsScreen';
-import EducationDetailsScreen from './src/screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
-import WorkExperienceScreen from './src/screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
-// import CompleteYourProfileScreen from './src/screen/JobSeeker/CompleteYourProfile/CompleteYourProfileScreen';
-
-   const App=()=>{
+const App=()=>{
     return(
-      <View>
-        {/* <OtpOptionScreen/> */}
-        {/* <HomeScreen/> */}
-        {/* <JobSeekerScreen/> */}
-        {/* <SignUpScreen/> */}
-
-        {/* nikhil created screens */}
-
-        {/* <ResetPassword/> */}
-        {/* <ResetPasswordSuccess/> */}
-        {/* <ForgetPasswordScreen/> */}
-        {/* <Stepper/> */}
-        {/* <BasicDetailsScreen/> */}
-        {/* <EducationDetailsScreen/> */}
-        <WorkExperienceScreen/>
+      <View style={{flex:1}}>
+       <StackNavigation/>
+       {/* <BasicDetailsScreen/> */}
       </View>
     )
    }
@@ -78,3 +50,38 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+
+
+
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React, { useState } from 'react'
+// import ResetPasswordSuccess from './src/screen/authScreen/forgetPasswordJob/ResetPasswordSuccess'
+// import GenderSelect from './src/reusableComponents/customTextInput/GenderSelect'
+// import CustomDropDownTextInput from './src/reusableComponents/customDropDownTextInput/CustomDropDownTextInput'
+
+// const App = () => {
+//   const [sValue, setsValue] = useState()
+//   return (
+//     <View style={{flex: 1, backgroundColor:'white',}}>
+//       {/* <ResetPasswordSuccess/> */}
+//       {/* <GenderSelect/> */}
+//       <CustomDropDownTextInput data={ [
+//     { label: 'country 1', value: '1' },
+//     { label: 'country 2', value: '2' },
+//     { label: 'country 3', value: '3' },
+//     { label: 'country 4', value: '4' },
+//     { label: 'country 5', value: '5' },
+//     { label: 'country 6', value: '6' },
+//     { label: 'country 7', value: '7' },
+//     { label: 'country 8', value: '8' },
+
+//   ]}  onChange={(I) => setsValue(I.value)} value={sValue}/>
+//     </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({})

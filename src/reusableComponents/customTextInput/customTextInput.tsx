@@ -15,7 +15,7 @@ const CustomTextInput = ({
   rightIcon,
   numberOfLines,
   multiline = false,
-
+  editable= true,
   // key,
   onRightIconPress,
 }) => {
@@ -29,6 +29,7 @@ const CustomTextInput = ({
       <TextInput
         value={value}
         // key={key}
+        editable={editable}
         onChangeText={onChangeText}
         placeholder={placeholder}
         numberOfLines={numberOfLines}

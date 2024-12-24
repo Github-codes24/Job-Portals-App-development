@@ -3,13 +3,14 @@ import { View,Text, StyleSheet, Touchable, TouchableOpacity } from "react-native
 import CustomHeader from "../../../reusableComponents/appHeader/customHeader";
 import CustomTextInput from "../../../reusableComponents/customTextInput/customTextInput";
 import CustomButton from "../../../reusableComponents/button/button";
-import { String } from "../../../utils/string";
-import { theme } from "../../../utils";
+import { String } from "../../../utils/";
+import {theme} from '../../../utils'
 import CheckBox from "@react-native-community/checkbox";
 import * as Svg from '../../../assets/images/svg';
+import { MainRoutes } from "../../../navigation/stackNavigation/routeAndParamsList";
 
 
-const SignUpScreen=()=>{
+const SignUpScreen=({navigation})=>{
 const [password, setPassword] = useState('');
   const [isValidLength, setIsValidLength] = useState(false);
   const [hasNumber, setHasNumber] = useState(false);
@@ -41,6 +42,7 @@ const handlePasswordChange = (input) => {
             <CustomHeader
             title='Create Account'
             leftIcon={<Svg.ArrowBack/>}
+            onLeftPress={()=>navigation.goBack()}
             />
             <CustomTextInput
             placeholder={'Full Name'}
@@ -58,6 +60,7 @@ const handlePasswordChange = (input) => {
              value={password}
               onChangeText={handlePasswordChange}
             placeholder={'Password'}
+                rightIcon={<Svg.EyeOpen/>}
             />
              <View style={style.guidelinesContainer}>
                 
@@ -91,6 +94,7 @@ const handlePasswordChange = (input) => {
       </View>
            <CustomTextInput
             placeholder={'Confirm Password'}
+            rightIcon={<Svg.EyeOpen/>}
             />
             <View style={style.checkBoxContainer}>
        <TouchableOpacity
@@ -99,7 +103,7 @@ const handlePasswordChange = (input) => {
       >
         {isChecked && (
           <Svg.CheckboxActive
-          color={'green'}
+           color={theme.lightColor.purple}
           />
         )}
       </TouchableOpacity>
@@ -113,7 +117,7 @@ const handlePasswordChange = (input) => {
             <CustomButton
             title={String.createAccount}
          style={{marginTop:theme.verticalSpacing.space_20,}}
-                  
+             onPress={()=>navigation.navigate(MainRoutes.VERIFY_YOUR_ACCOUNT_SCREEN)}     
             />
             
     <View style={{ flexDirection: 'row', alignItems: 'center',width:'100%',marginTop:theme.verticalSpacing.space_18,justifyContent:'center' }}>
@@ -140,7 +144,6 @@ const style=StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
-    
     paddingHorizontal:8,
    
   },

@@ -1,15 +1,16 @@
 import {wp, hp, fp} from './responsiveUi';
 const theme = {
   lightColor: {
-   gray:'#00000082',
+      gray:'#00000082',
     sapphire: '#745CFF',
     successColor: '#1FD046',
     darkVariantColor: '#195688',
     warningColor: '#F9D162',
     alertColor: '#FD5F5F',
     lightGrayColor: '#D9D9D9',
-    purple:'#7900BA'
-   
+    purple:'#7900BA',
+   inputGray:'#D3D3D39C',
+   blackColor:'#272727'
    
   },
 
@@ -116,6 +117,7 @@ const theme = {
     space_388: hp(388),
     space_260: hp(260),
    space_230: hp(230),
+   
    space_320: hp(320),
   },
   horizontalSpacing: {
@@ -173,6 +175,8 @@ const theme = {
     space_156: wp(156),
      space_370: wp(370),
       space_260: wp(260),
+       space_187: wp(187),
+       space_230: wp(230),
   },
   boderRadius: {
     small_4: 4,

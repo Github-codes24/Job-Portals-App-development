@@ -3,8 +3,9 @@ import React from 'react'
 import { theme } from '../../../utils'
 import { String } from '../../../utils/string'
 import CustomButton from '../../../reusableComponents/button/button'
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList'
 
-const ResetPasswordSuccess = () => {
+const ResetPasswordSuccess = ({navigation}) => {
   return (
     <View>
       <Image source={require('../../../assets/images/Vector.png')} style={styles.Img} />
@@ -12,7 +13,7 @@ const ResetPasswordSuccess = () => {
       <Text style={styles.ResetTextSmall}>{String.LoginWithNewPassword}</Text>
       <CustomButton 
        title={'Login'}
-       onPress={undefined}
+       onPress={() => navigation.navigate(MainRoutes.BASIC_DETAILS)}
        style={styles.btn}
        textStyle={undefined}
       />
@@ -29,14 +30,14 @@ const styles = StyleSheet.create({
         marginTop: theme.verticalSpacing.space_100,
     },
     ResetText:{
-        fontSize: theme.fontSizes.size_36,
+        fontSize: theme.fontSizes.size_24,
         marginHorizontal: theme.horizontalSpacing.space_2,
         alignSelf:'center',
         textAlign:'center',
         marginTop: theme.verticalSpacing.space_22,
     },
     ResetTextSmall:{
-        fontSize: theme.fontSizes.size_20,
+        fontSize: theme.fontSizes.size_14,
         marginHorizontal: theme.horizontalSpacing.space_2,
         alignSelf:'center',
         marginTop: theme.verticalSpacing.space_14,
