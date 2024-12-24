@@ -9,6 +9,7 @@ import CustomButton from '../../../reusableComponents/button/button';
 import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
 const WorkExperienceScreen = ({navigation}) => {
   const [iAmFresher, SetiAmFresher] = useState(false)
+  const [isChecked,setIsChecked]=useState(false)
   return (
     <View style={{padding: 10, backgroundColor:'white'}}>
       <CustomHeader
@@ -20,7 +21,7 @@ const WorkExperienceScreen = ({navigation}) => {
               <Text style={styles.titleText}>Tell Us About Your Work Experience</Text>
               <Stepper/>   
                 <View style={styles.checkBoxContainer}>
-                          <View style={{flexDirection:"row",alignItems:"center"}}>
+                          <View style={{flexDirection:"row",alignItems:"center",width:'100%',justifyContent:"center"}}>
                                <TouchableOpacity
                                 style={styles.checkbox}
                                 onPress={() => setIsChecked(!isChecked)}
@@ -32,12 +33,12 @@ const WorkExperienceScreen = ({navigation}) => {
                                 )}
                               </TouchableOpacity>
                               <Text style={styles.text}>
-                                Remember me
+                                i am a Fresher
                               </Text>
                               </View>
                             </View>
                             
-              <TouchableOpacity style={styles.FresherCheck} onPress={ () => { SetiAmFresher(!iAmFresher)}} > { iAmFresher ? (<Svg.CheckboxActive/> ): ( <Svg.CheckboxInactive/> )} <Text style={styles.FresherCheckText}>I am a Fresher</Text> </TouchableOpacity>
+
 
               <CustomTextInput
               value={undefined}
@@ -130,17 +131,15 @@ const styles = StyleSheet.create({
      checkBoxContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 10,
-   marginTop:20,
     width:'100%',
     justifyContent:"space-between"
   },
   checkbox: {
-    width:theme.horizontalSpacing.space_18,
-    height:theme.verticalSpacing.space_18 ,
+    width:theme.horizontalSpacing.space_20,
+    height:theme.verticalSpacing.space_20 ,
     borderWidth: 1,
     borderColor: theme.lightColor.purple,
-      borderRadius:5
+    borderRadius:5
   },
   text: {
     fontSize:theme.fontSizes.size_16,

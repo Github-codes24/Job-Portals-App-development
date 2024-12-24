@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { theme } from '../../utils';
 
-const ProfileCompletionCard = ({ percentage =1 }) => {
+const ProfileCompletionCard = ({ percentage =5,onPress }) => {
   const normalizedPercentage = Math.min(Math.max(percentage, 0), 100); // Clamp percentage between 0 and 100
   const rotation = (normalizedPercentage / 100) * 360; // Calculate rotation degrees
 
@@ -20,7 +20,9 @@ const ProfileCompletionCard = ({ percentage =1 }) => {
       {/* Text Section */}
       <View style={styles.textContainer}>
         <Text style={styles.heading}>Your profile editing is not completed.</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button}
+        onPress={onPress}
+        >
           <Text style={styles.buttonText}>Edit Profile</Text>
           <Text style={styles.arrow}>→</Text>
         </TouchableOpacity>
@@ -108,44 +110,50 @@ const styles = StyleSheet.create({
   progressContainer: {
     alignItems: 'center',
     justifyContent: 'center',
+  
   },
   outerCircle: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width:theme.horizontalSpacing.space_74,
+    height:theme.verticalSpacing.space_76,
+    borderRadius:45,
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
+    borderColor:'#9857CF',
+    
   },
   backgroundCircle: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 50,
-    borderWidth: 6,
+    borderWidth:5,
     borderColor: '#E0E0E0', // Placeholder color
   },
   progressOverlay: {
     ...StyleSheet.absoluteFillObject,
     borderRadius: 50,
-    borderWidth: 6,
+    borderWidth: 5,
     borderColor: 'transparent', // This will be dynamically updated
     borderRightColor: 'transparent',
     borderBottomColor: 'transparent',
   },
   innerMask: {
     position: 'absolute',
-    width: 88,
-    height: 88,
-    borderRadius: 44,
+    width: theme.horizontalSpacing.space_70,
+    height:theme.verticalSpacing.space_70,
+    borderRadius:35,
     backgroundColor: '#F6E9FF',
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth:3,
+    borderColor:"#B47AD4"
+    
   },
   innerCircle: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
-    borderWidth: 6,
-    borderColor: '#E0E0E0', // Placeholder color, dynamically updated
+    width:theme.horizontalSpacing.space_60,
+    height:theme.verticalSpacing.space_58,
+    borderRadius:30,
+    borderWidth:5,
+    borderColor: '#E0E0E0', 
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#F6E9FF',

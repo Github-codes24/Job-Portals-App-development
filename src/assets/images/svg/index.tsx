@@ -15,6 +15,13 @@ import CloseEye from './common/CloseEye';
 import AddIcon from './common/AddIcon';
 import ArrowNext from './common/ArrowNext';
 import UploadIcon from './common/UploadIcon';
+import SearchIcon from "./common/searchIcon";
+import Drower from "./common/drower";
+import SimpleBellIcon from "./common/simpleBellIcon";
+import ProfileIcon from "./common/profileIcon";
+import MessageIcon from "./common/messageIcon";
+import DotIcon from "./common/dotIcon";
+import CircleArrow from "./common/circleArrow";
 
 export {
   ArrowBack,
@@ -34,4 +41,11 @@ export {
  AddIcon,
  ArrowNext,
  UploadIcon,
+ SearchIcon,
+ Drower,
+ SimpleBellIcon,
+ ProfileIcon,
+ MessageIcon,
+ DotIcon,
+ CircleArrow
 };

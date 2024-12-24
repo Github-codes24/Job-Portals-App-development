@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import { MainRoutes } from './routeAndParamsList';
 import EmailVerificationScreen from '../../screen/authScreen/emailVerificationjob/emailVerification';
 import jobPhoneVerificationScreen from '../../screen/authScreen/phoneVerificationjob/phoneVerification';
 import JobLoginScreen from '../../screen/authScreen/jobLoginScreen/jobLoginScreen';
@@ -17,16 +17,13 @@ import BasicDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/Basic
 import EducationDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
 import Stepper from '../../screen/JobSeeker/CompleteYourProfile/Stepper';
 import WorkExperienceScreen from '../../screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
-import JobDashboardScreen from '../../screen/JobSeeker/jobDashboardScreen';
 
-import { MainRoutes } from './routeAndParamsList';
-import BasicDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/BasicDetailsScreen';
-import EducationDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
-import WorkExperienceScreen from '../../screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
 import CertificationScreen from '../../screen/JobSeeker/CompleteYourProfile/CertificationScreen';
 import SkillsAndPreferencesScreen from '../../screen/JobSeeker/CompleteYourProfile/SkillsAndPreferencesScreen';
 import UploadDocumentsScreen from '../../screen/JobSeeker/CompleteYourProfile/UploadDocumentsScreen';
 import YouAreAllSetScreen from '../../screen/JobSeeker/CompleteYourProfile/YouAreAllSetScreen';
+import JobDashboardScreen from '../../screen/JobSeeker/jobDashboardScreen';
+
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -49,10 +46,10 @@ const StackNavigation = () => {
            <Stack.Screen name={MainRoutes.RESETPASSWORD_SUCCESS} component={ResetPasswordSuccess} />
           <Stack.Screen name={MainRoutes.BASIC_DETAILS_SCREEN} component={BasicDetailsScreen} />
          <Stack.Screen name={MainRoutes.EDUCATION_DETAILS_SCREEN} component={EducationDetailsScreen} />
-          <Stack.Screen name={MainRoutes.STEPPER_SCREEN} component={Stepper} />
+          {/* <Stack.Screen name={MainRoutes.STEPPER_SCREEN} component={Stepper} /> */}
           <Stack.Screen name={MainRoutes.WORK_EXPERIENCE_SCREEN} component={WorkExperienceScreen} />
-                <Stack.Screen name={MainRoutes.JOB_DASHBOARD_SCREEN} component={JobDashboardScreen} />
-            <Stack.Screen name={MainRoutes.RESETPASSWORD_SUCCESS} component={ResetPasswordSuccess} />
+            <Stack.Screen name={MainRoutes.JOB_DASHBOARD_SCREEN} component={JobDashboardScreen} />
+
             <Stack.Screen name={MainRoutes.BASIC_DETAILS} component={BasicDetailsScreen} />
             <Stack.Screen name={MainRoutes.EDUCATION_DETAILS} component={EducationDetailsScreen} />
             <Stack.Screen name={MainRoutes.WORKEXPERIENCE_DETAILS} component={WorkExperienceScreen} />
