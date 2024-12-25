@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
     main:{
         backgroundColor:'white',
         padding: 10,
+        
     },
     titleText:{
         fontSize: theme.fontSizes.size_18,

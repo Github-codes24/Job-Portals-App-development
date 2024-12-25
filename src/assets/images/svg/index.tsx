@@ -15,6 +15,7 @@ import CloseEye from './common/CloseEye';
 import AddIcon from './common/AddIcon';
 import ArrowNext from './common/ArrowNext';
 import UploadIcon from './common/UploadIcon';
+import CalenderIcon from './common/CalenderIcon';
 
 export {
   ArrowBack,
@@ -34,4 +35,5 @@ export {
  AddIcon,
  ArrowNext,
  UploadIcon,
+ CalenderIcon,
 };
