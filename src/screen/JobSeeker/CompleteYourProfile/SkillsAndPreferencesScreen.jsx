@@ -114,7 +114,6 @@ const SkillsAndPreferencesScreen = ({navigation}) => {
               inputStyle={undefined}
               />
 
-
             <Text style={styles.SalaryRangeTitle}>Desired Salary Range</Text>
               <View style ={styles.SalaryRangeContainer}>
               <CustomDropDownTextInput
