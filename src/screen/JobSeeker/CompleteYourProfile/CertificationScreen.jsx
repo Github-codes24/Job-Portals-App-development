@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import CustomHeader from '../../../reusableComponents/appHeader/customHeader'
 import CustomTextInput from '../../../reusableComponents/customTextInput/customTextInput'
 import Stepper from './Stepper';
@@ -7,10 +7,17 @@ import * as Svg from '../../../assets/images/svg';
 import CustomButton from '../../../reusableComponents/button/button';
 import { theme } from '../../../utils';
 import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
+import CustomDatePicker from '../../../reusableComponents/CustomDatePicker/CustomDatePicker';
 
 const CertificationScreen = ({navigation}) => {
+  const [showDatePicker, SetShowDatePicker] = useState(false)
+    const [selectedDate, SetSelectedDate] = useState(null)
+
+    const handleDateToggel = () => {
+      SetShowDatePicker(true)
+    }
   return (
-    <View style={{padding: 10, backgroundColor:'white'}}>
+    <View style={styles.main}>
        <CustomHeader
             title={'Cetrifications'}
               leftIcon={<Svg.ArrowBack />}
@@ -53,17 +60,22 @@ const CertificationScreen = ({navigation}) => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-              <CustomTextInput
-              value={undefined}
-              onChangeText={undefined}
-              placeholder={'Date of Completion'}
-              // style={styles.Input}
-              inputStyle={undefined}
-              leftIcon={undefined}
-              onLeftIconPress={undefined}
-              rightIcon={undefined}
-              onRightIconPress={undefined}
-              />
+              <CustomDatePicker
+              selectedDate={selectedDate}
+              showDatePicker={showDatePicker}
+              placeholder={'Date Of Completion'}
+              onPress={handleDateToggel}
+              onConfirm={(date) => {
+                if (date) {
+                  SetSelectedDate(date)
+                }
+                SetShowDatePicker(false)
+              }}
+              onCancel={() => {
+                SetShowDatePicker(!showDatePicker)
+              }}
+               />
+              
               <View style={styles.addskips}>
 
                <TouchableOpacity style={styles.AddAnother} > <Svg.AddIcon/> <Text style={styles.AddAnotherText}> Add Another Certification</Text> </TouchableOpacity>
@@ -82,6 +94,11 @@ const CertificationScreen = ({navigation}) => {
 export default CertificationScreen
 
 const styles = StyleSheet.create({
+  main:{
+    padding: 10,
+    backgroundColor:'white',
+     flex:1
+  },
   titleText:{
     fontSize: theme.fontSizes.size_18,
     color: theme.lightColor.gray,
