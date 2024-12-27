@@ -17,7 +17,6 @@ import BasicDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/Basic
 import EducationDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
 import Stepper from '../../screen/JobSeeker/CompleteYourProfile/Stepper';
 import WorkExperienceScreen from '../../screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
-
 import CertificationScreen from '../../screen/JobSeeker/CompleteYourProfile/CertificationScreen';
 import SkillsAndPreferencesScreen from '../../screen/JobSeeker/CompleteYourProfile/SkillsAndPreferencesScreen';
 import UploadDocumentsScreen from '../../screen/JobSeeker/CompleteYourProfile/UploadDocumentsScreen';
@@ -49,7 +48,6 @@ const StackNavigation = () => {
           {/* <Stack.Screen name={MainRoutes.STEPPER_SCREEN} component={Stepper} /> */}
           <Stack.Screen name={MainRoutes.WORK_EXPERIENCE_SCREEN} component={WorkExperienceScreen} />
             <Stack.Screen name={MainRoutes.JOB_DASHBOARD_SCREEN} component={JobDashboardScreen} />
-
             <Stack.Screen name={MainRoutes.BASIC_DETAILS} component={BasicDetailsScreen} />
             <Stack.Screen name={MainRoutes.EDUCATION_DETAILS} component={EducationDetailsScreen} />
             <Stack.Screen name={MainRoutes.WORKEXPERIENCE_DETAILS} component={WorkExperienceScreen} />

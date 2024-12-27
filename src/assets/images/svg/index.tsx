@@ -22,6 +22,7 @@ import ProfileIcon from "./common/profileIcon";
 import MessageIcon from "./common/messageIcon";
 import DotIcon from "./common/dotIcon";
 import CircleArrow from "./common/circleArrow";
+import LocationIcon from "./common/locationIcon";
 
 export {
   ArrowBack,
@@ -47,5 +48,6 @@ export {
  ProfileIcon,
  MessageIcon,
  DotIcon,
- CircleArrow
+ CircleArrow,
+ LocationIcon
 };

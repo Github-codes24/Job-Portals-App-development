@@ -5,7 +5,7 @@ import CustomTextInput from "../../../reusableComponents/customTextInput/customT
 import CustomButton from "../../../reusableComponents/button/button";
 import { String } from "../../../utils/";
 import {theme} from '../../../utils'
-import CheckBox from "@react-native-community/checkbox";
+
 import * as Svg from '../../../assets/images/svg';
 import { MainRoutes } from "../../../navigation/stackNavigation/routeAndParamsList";
 
