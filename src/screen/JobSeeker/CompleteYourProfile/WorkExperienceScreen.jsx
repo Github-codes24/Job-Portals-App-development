@@ -7,11 +7,23 @@ import CustomTextInput from '../../../reusableComponents/customTextInput/customT
 import { theme } from '../../../utils';
 import CustomButton from '../../../reusableComponents/button/button';
 import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList';
+import CustomDatePicker from '../../../reusableComponents/CustomDatePicker/CustomDatePicker';
 const WorkExperienceScreen = ({navigation}) => {
   const [iAmFresher, SetiAmFresher] = useState(false)
-  const [isChecked,setIsChecked]=useState(false)
+    const [showStartDatePicker, SetShowStartDatePicker] = useState(false)
+      const [selectedStartDate, SetSelectedStartDate] = useState(null)
+
+    const [showEndDatePicker, SetShowEndDatePicker] = useState(false)
+      const [selectedEndDate, SetSelectedEndDate] = useState(null)
+  
+      const handleStartDateToggel = () => {
+        SetShowStartDatePicker(true)
+      }
+      const handleEndDateToggel = () => {
+        SetShowEndDatePicker(true)
+      }
   return (
-    <View style={{padding: 10, backgroundColor:'white'}}>
+    <View style={styles.main}>
       <CustomHeader
             title={'Work Experience'}
               leftIcon={<Svg.ArrowBack />}
@@ -62,7 +74,7 @@ const WorkExperienceScreen = ({navigation}) => {
               rightIcon={undefined}
               onRightIconPress={undefined}
               />
-              <CustomTextInput
+              {/* <CustomTextInput
               value={undefined}
               onChangeText={undefined}
               placeholder={'Start Date'}
@@ -72,8 +84,39 @@ const WorkExperienceScreen = ({navigation}) => {
               onLeftIconPress={undefined}
               rightIcon={undefined}
               onRightIconPress={undefined}
-              />
-              <CustomTextInput
+              /> */}
+
+            <CustomDatePicker
+              selectedDate={selectedStartDate}
+              showDatePicker={showStartDatePicker}
+              placeholder={'Start Date'}
+              onPress={handleStartDateToggel}
+              onConfirm={(date) => {
+                if (date) {
+                  SetSelectedStartDate(date)
+                }
+                SetShowStartDatePicker(false)
+              }}
+              onCancel={() => {
+                SetShowStartDatePicker(!showStartDatePicker)
+              }}
+               />
+            <CustomDatePicker
+              selectedDate={selectedEndDate}
+              showDatePicker={showEndDatePicker}
+              placeholder={'End Date'}
+              onPress={handleEndDateToggel}
+              onConfirm={(date) => {
+                if (date) {
+                  SetSelectedEndDate(date)
+                }
+                SetShowEndDatePicker(false)
+              }}
+              onCancel={() => {
+                SetShowEndDatePicker(!showEndDatePicker)
+              }}
+               />
+              {/* <CustomTextInput
               value={undefined}
               onChangeText={undefined}
               placeholder={'End Date'}
@@ -83,7 +126,7 @@ const WorkExperienceScreen = ({navigation}) => {
               onLeftIconPress={undefined}
               rightIcon={undefined}
               onRightIconPress={undefined}
-              />
+              /> */}
             <TouchableOpacity style={styles.WorkingCheck} > <Svg.CheckboxInactive/> <Text style={styles.WorkingCheckText}>Currently Working Here</Text> </TouchableOpacity>
             <CustomTextInput
               value={undefined}
@@ -112,6 +155,11 @@ const WorkExperienceScreen = ({navigation}) => {
 export default WorkExperienceScreen
 
 const styles = StyleSheet.create({
+  main:{
+    padding: 10,
+    backgroundColor:'white',
+     flex:1
+  },
     FresherCheck:{
         flexDirection: 'row',
         justifyContent:'center'

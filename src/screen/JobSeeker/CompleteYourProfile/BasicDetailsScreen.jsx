@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
     main:{
         backgroundColor:'white',
         padding: 10,
+        flex:1
     },
     titleText:{
       fontSize: theme.fontSizes.size_18,
