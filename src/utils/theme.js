@@ -188,6 +188,7 @@ const theme = {
     xlarge_12: 12,
     xxlarge_14: 14,
     xxxlarge_16: 16,
+    xxxXlarge_25: 25,
   },
   iconsSize: {
     small_8: fp(8),

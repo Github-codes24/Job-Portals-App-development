@@ -3,8 +3,9 @@ import React from 'react'
 import { String, theme } from '../../../utils'
 import Stepper from './Stepper'
 import CustomButton from '../../../reusableComponents/button/button'
+import { MainRoutes } from '../../../navigation/stackNavigation/routeAndParamsList'
 
-const YouAreAllSetScreen = () => {
+const YouAreAllSetScreen = ({navigation}) => {
   return (
     <View style={styles.main}> 
       <Text style={styles.Title}>You're All Set,</Text>
@@ -14,7 +15,7 @@ const YouAreAllSetScreen = () => {
       <Text style={styles.SubText}>{String.YouAreAllSetSubTitle}</Text>
       <CustomButton
       title={'Browse Jobs'}
-      // onPress={() => navigation.navigate(MainRoutes.YOU_ARE_ALL_SET)}
+      onPress={() => navigation.navigate(MainRoutes.BROWSE_JOB_CANDIDATE_SCREEN)}
       style={styles.btn}
       textStyle={undefined}
     />
@@ -22,7 +23,7 @@ const YouAreAllSetScreen = () => {
       title={'My Profile'}
       backgroundColor = {'#ffffff'}
   textColor = {'#6A0DAD'}
-      // onPress={() => navigation.navigate(MainRoutes.YOU_ARE_ALL_SET)}
+      onPress={() => navigation.navigate(MainRoutes.JOB_DASHBOARD_SCREEN)}
       style={styles.btnsecond}
       textStyle={undefined}
     />

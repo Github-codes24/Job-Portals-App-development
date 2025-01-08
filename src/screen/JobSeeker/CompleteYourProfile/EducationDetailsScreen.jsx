@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         height:"100%",
         backgroundColor: 'white',
         padding: 10,
-        flex:1
+        flex:1,
 
     },
     titleText:{

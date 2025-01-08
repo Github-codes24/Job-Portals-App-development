@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { MainRoutes } from './routeAndParamsList';
 import EmailVerificationScreen from '../../screen/authScreen/emailVerificationjob/emailVerification';
-import jobPhoneVerificationScreen from '../../screen/authScreen/phoneVerificationjob/phoneVerification';
 import JobLoginScreen from '../../screen/authScreen/jobLoginScreen/jobLoginScreen';
 import SignUpScreen from '../../screen/authScreen/signUpScreen/signUpscreenJob';
 import HomeScreen from '../../screen/JobSeeker/homeScreen';
@@ -15,13 +14,15 @@ import ResetPasswordSuccess from '../../screen/authScreen/forgetPasswordJob/Rese
 import ResetPassword from '../../screen/authScreen/forgetPasswordJob/ResetPassword';
 import BasicDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/BasicDetailsScreen';
 import EducationDetailsScreen from '../../screen/JobSeeker/CompleteYourProfile/EducationDetailsScreen';
-import Stepper from '../../screen/JobSeeker/CompleteYourProfile/Stepper';
 import WorkExperienceScreen from '../../screen/JobSeeker/CompleteYourProfile/WorkExperienceScreen';
 import CertificationScreen from '../../screen/JobSeeker/CompleteYourProfile/CertificationScreen';
 import SkillsAndPreferencesScreen from '../../screen/JobSeeker/CompleteYourProfile/SkillsAndPreferencesScreen';
 import UploadDocumentsScreen from '../../screen/JobSeeker/CompleteYourProfile/UploadDocumentsScreen';
 import YouAreAllSetScreen from '../../screen/JobSeeker/CompleteYourProfile/YouAreAllSetScreen';
 import JobDashboardScreen from '../../screen/JobSeeker/jobDashboardScreen';
+import JobPhoneVerificationScreen from '../../screen/authScreen/phoneVerificationjob/phoneVerification';
+import BrowseJobCandidateScreen from '../../screen/JobSeeker/BrowseJobCandidate/BrowseJobCandidateScreen';
+import BrowseJobCandidateFilter from '../../screen/JobSeeker/BrowseJobCandidateFilter/BrowseJobCandidateFilter';
 
 const Stack = createStackNavigator();
 const StackNavigation = () => {
@@ -35,7 +36,7 @@ const StackNavigation = () => {
         <Stack.Screen name={MainRoutes.HOME_SCREEN} component={HomeScreen} />
         <Stack.Screen name={MainRoutes.EMAILVERIFICATION_SCREEN} component={EmailVerificationScreen} />
          <Stack.Screen name={MainRoutes.JOBLOGIN_SCREEN} component={JobLoginScreen} />
-          <Stack.Screen name={MainRoutes.JOBPHONEVERIFICATION_SCREEN} component={jobPhoneVerificationScreen} />
+          <Stack.Screen name={MainRoutes.JOBPHONEVERIFICATION_SCREEN} component={JobPhoneVerificationScreen} />
          <Stack.Screen name={MainRoutes.SIGN_UP_SCREEN} component={SignUpScreen} />
         <Stack.Screen name={MainRoutes.VERIFY_YOUR_ACCOUNT_SCREEN} component={VerifyYourAccountScreen} />
         <Stack.Screen name={MainRoutes.JOB_SEEKER_SCREEN} component={JobSeekerScreen} />
@@ -55,6 +56,8 @@ const StackNavigation = () => {
             <Stack.Screen name={MainRoutes.SKILLS_AND_PREFERANCES} component={SkillsAndPreferencesScreen} />
             <Stack.Screen name={MainRoutes.UPLOAD_DOCUMENTS} component={UploadDocumentsScreen} />
             <Stack.Screen name={MainRoutes.YOU_ARE_ALL_SET} component={YouAreAllSetScreen} />
+            <Stack.Screen name={MainRoutes.BROWSE_JOB_CANDIDATE_SCREEN} component={BrowseJobCandidateScreen} />
+            <Stack.Screen name={MainRoutes.BROWSE_JOB_CANDIDATE_FILTER_SCREEN} component={BrowseJobCandidateFilter} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -31,13 +31,7 @@ const CustomDropDownTextInput = ({
         searchPlaceholder="Search..."
         value={value}
         onChange={onChange}
-        //   onFocus={() => setIsFocus(true)}
-        //   onBlur={() => setIsFocus(false)}
-        // value={value}
-        // onChange={item => { console.log( item"hi")}}
-        // renderLeftIcon={() => (
-        // //   <AntDesign style={styles.icon} color="black" name="Safety" size={20} />
-        // )}
+
       />
     </View>
   )

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { View, Text, TextInput,FlatList, StyleSheet,Image, StatusBar, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
@@ -8,12 +9,12 @@ import ProfileCompletionCard from "../../reusableComponents/ProfileCompletionCar
 import { MainRoutes } from "../../navigation/stackNavigation/routeAndParamsList";
 import { Jobs } from "../../utils/jobData";
 import { ScrollView } from "react-native-gesture-handler";
-const JobDashboardScreen = ({ navigation }) => {
+const JobDashboardScreen = ({ navigation }:any) => {
 
     const [count,setCount]=useState(0)
 
- const renderItem = ({ item }) => (
-    <View style={{backgroundColor:"white",width:'100%s'}}>
+ const renderItem = ({ item }:any) => (
+    <View >
     <LinearGradient 
     colors={["#FFF7E7", "#FFFFFF"]} 
     style={styles.card}>
@@ -102,19 +103,19 @@ const JobDashboardScreen = ({ navigation }) => {
 {/* ----------------------CARD VIEW------------------------------------ */}
         <View  style={[styles.cardView,{paddingLeft:15}]}>
        <JobCard
-       color={'#9857CF'}
-      topRightSvg={<Svg.DotIcon color={'brown'} />}
-      backgroundImage={require('../../assets/images/wright.png')}
-      count={count}
-      title={'jobs applied'} />
+          color={'#9857CF'}
+          // topRightImage={<Svg.DotIcon color={'brown'} />}  // need to send image url 
+          backgroundImage={require('../../assets/images/wright.png')}
+          count={count}
+          title={'jobs applied'} onPress={undefined} topRightImage={undefined} />
 
         <JobCard
-       color={'#3E1654'}
-       topRightSvg={<Svg.DotIcon/>}
-       backgroundImage={require('../../assets/images/questionMark.png')}
-        count={count}
-        title={'saves jobs'}
-      />
+          color={'#3E1654'}
+          //  topRightSvg={<Svg.DotIcon/>}
+          // topRightImage={<Svg.DotIcon />} //need to send image url 
+          backgroundImage={require('../../assets/images/questionMark.png')}
+          count={count}
+          title={'saves jobs'} onPress={undefined} topRightImage={undefined}      />
       <Svg.CircleArrow/>
 </View>
 

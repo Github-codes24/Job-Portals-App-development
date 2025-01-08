@@ -6,7 +6,7 @@ import VerificationScreen from "../../../reusableComponents/verification/verific
 import { MainRoutes } from "../../../navigation/stackNavigation/routeAndParamsList";
 
 
-const jobPhoneVerificationScreen=({navigation})=>{
+const JobPhoneVerificationScreen=({navigation})=>{
 return (
     <View>
         <CustomHeader
@@ -24,4 +24,4 @@ return (
 )
 }
 
-export default jobPhoneVerificationScreen;
+export default JobPhoneVerificationScreen;

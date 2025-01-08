@@ -26,7 +26,9 @@ export const MainRoutes = {
    JOB_DASHBOARD_SCREEN:'jobDashboardScreen',
  EDUCATION_DETAILS_SCREEN:'EducationDetailsScreen',
  BASIC_DETAILS_SCREEN:'BasicDetailsScreen',
- WORK_EXPERIENCE_SCREEN:'WorkExperienceScreen'
+ WORK_EXPERIENCE_SCREEN:'WorkExperienceScreen',
+ BROWSE_JOB_CANDIDATE_SCREEN:'BrowseJobCandidateScreen',
+ BROWSE_JOB_CANDIDATE_FILTER_SCREEN:'BrowseJobCandidateFilterScreen',
 };
 
 export const RootStackParamList = {
@@ -52,6 +54,8 @@ export const RootStackParamList = {
     [MainRoutes.EDUCATION_DETAILS_SCREEN]: {}|undefined,
     [MainRoutes.BASIC_DETAILS_SCREEN]: {}|undefined,
       [MainRoutes.WORK_EXPERIENCE_SCREEN]: {}|undefined,
+      [MainRoutes.BROWSE_JOB_CANDIDATE_SCREEN]: {}|undefined,
+      [MainRoutes.BROWSE_JOB_CANDIDATE_FILTER_SCREEN]: {}|undefined,
    
 };
 
