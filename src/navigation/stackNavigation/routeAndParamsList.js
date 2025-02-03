@@ -26,7 +26,17 @@ export const MainRoutes = {
    JOB_DASHBOARD_SCREEN:'jobDashboardScreen',
  EDUCATION_DETAILS_SCREEN:'EducationDetailsScreen',
  BASIC_DETAILS_SCREEN:'BasicDetailsScreen',
- WORK_EXPERIENCE_SCREEN:'WorkExperienceScreen'
+ WORK_EXPERIENCE_SCREEN:'WorkExperienceScreen',
+ JOB_OVERVIEW_SCREEN:'JobOverviewScreen',
+ JOBPOST_SUCCESS_SCREEN:'JobPostSuccessScreen',
+ VIEWJOBS_SCREEN:'ViewJobsScreen',
+ EDITJOB_SCREEN:'EditJobScreen',
+ JOBUPDATE_SCREEN:'JobUpdateScreen',
+ JOBPOSTEDSUCCESSFULLY_SCREEN:'JobPostedSuccesfullyScreen',
+ SHAREJOB_SCREEN:'ShareJobScreen',
+ POSTJOB_SCREEN:'PostJobScreen',
+ EDITCOMPANYDETAILS_SCREEN:'EditCompanyDetailsScreen',
+ UPDATECOMPANYDETAILS_SCREEN:'UpdateCompanydetailsscreen',
 };
 
 export const RootStackParamList = {
@@ -52,7 +62,16 @@ export const RootStackParamList = {
     [MainRoutes.EDUCATION_DETAILS_SCREEN]: {}|undefined,
     [MainRoutes.BASIC_DETAILS_SCREEN]: {}|undefined,
       [MainRoutes.WORK_EXPERIENCE_SCREEN]: {}|undefined,
-   
+      [MainRoutes.JOB_OVERVIEW_SCREEN]: {}|undefined,
+      [MainRoutes.JOBPOST_SUCCESS_SCREEN]: {}|undefined,
+      [MainRoutes.VIEWJOBS_SCREEN]:{}|undefined,
+      [MainRoutes.EDITJOB_SCREEN]:{}|undefined,
+      [MainRoutes.JOBUPDATE_SCREEN]:{}|undefined,
+      [MainRoutes.JOBPOSTEDSUCCESSFULLY_SCREEN]:{}|undefined,
+      [MainRoutes.SHAREJOB_SCREEN]:{}|undefined,
+      [MainRoutes.POSTJOB_SCREEN]:{}|undefined,
+      [MainRoutes.EDITCOMPANYDETAILS_SCREEN]:{}|undefined,
+      [MainRoutes.UPDATECOMPANYDETAILS_SCREEN]:{}|undefined,
 };
 
 export const MainStack = createStackNavigator();

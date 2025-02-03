@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Dimensions } from 'react-native';
 import Svg, { Path, Rect } from 'react-native-svg';
 
-const ArrowNext = ({ size = 24, color = "black" }) => {
+const ArrowNext = ({ size = 18, color = "black" }) => {
 
 
     return (
