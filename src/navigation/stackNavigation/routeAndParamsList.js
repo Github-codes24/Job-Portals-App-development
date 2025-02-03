@@ -29,6 +29,11 @@ export const MainRoutes = {
  WORK_EXPERIENCE_SCREEN:'WorkExperienceScreen',
  BROWSE_JOB_CANDIDATE_SCREEN:'BrowseJobCandidateScreen',
  BROWSE_JOB_CANDIDATE_FILTER_SCREEN:'BrowseJobCandidateFilterScreen',
+ MANAGEJOBS_SCREEN:'ManageJobs',
+ MANAGEJOBS_DETAILS_sCREEN:'ManageJobsDetailsScreen',
+ APPLICATION_sCREEN:'ApplicationScreen',
+ CANDIDATE_PROFILE_SCREEN:'CandidateProfileScreen',
+ JOBEMPLOYERVIEW_SCREEN:'JobEmployerViewScreen',
 };
 
 export const RootStackParamList = {
@@ -56,6 +61,11 @@ export const RootStackParamList = {
       [MainRoutes.WORK_EXPERIENCE_SCREEN]: {}|undefined,
       [MainRoutes.BROWSE_JOB_CANDIDATE_SCREEN]: {}|undefined,
       [MainRoutes.BROWSE_JOB_CANDIDATE_FILTER_SCREEN]: {}|undefined,
+      [MainRoutes.MANAGEJOBS_SCREEN]: {}|undefined,
+      [MainRoutes.MANAGEJOBS_DETAILS_sCREEN]: {}|undefined,
+      [MainRoutes.APPLICATION_sCREEN]: {}|undefined,
+      [MainRoutes.CANDIDATE_PROFILE_SCREEN]: {}|undefined,
+      [MainRoutes.JOBEMPLOYERVIEW_SCREEN]: {}|undefined,
    
 };
 

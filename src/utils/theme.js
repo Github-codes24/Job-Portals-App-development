@@ -57,6 +57,7 @@ const theme = {
       extrabold_800: 'Jost-ExtraBold',
       semibold_600: 'Jost-SemiBold',
     },
+  
   },
 
   verticalSpacing: {
@@ -116,6 +117,7 @@ const theme = {
     space_156: hp(156),
     space_388: hp(388),
     space_260: hp(260),
+   space_214: hp(214),
    space_230: hp(230),
    space_165:hp(165),
    space_320: hp(320),
@@ -189,6 +191,7 @@ const theme = {
     xxlarge_14: 14,
     xxxlarge_16: 16,
     xxxXlarge_25: 25,
+    xxxXlarge_45: 45,
   },
   iconsSize: {
     small_8: fp(8),

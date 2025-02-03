@@ -29,6 +29,15 @@ import GridIcon from './common/GridIcon';
 import ListIcon from './common/ListIcon';
 import SelectCategoryLayerIcon from './common/SelectCategoryLayerIcon';
 import SelectAdvanceFilterIcon from './common/SelectAdvanceFilterIcon';
+import BackArrowIcon from './common/BackArrowIcon';
+import SaveIcon from './common/SaveIcon';
+import AddIconRounded from './common/AddIconRouded';
+import DaimandIcon from './common/DaimandIcon';
+import DownloadIcon from './common/DownloadIcon';
+import CheckCircle from './common/CheckCircle';
+import XcircleIcon from './common/XCircleIcon';
+import PersonIcon from './common/PersonIcon';
+import ThreeVerticalDotsIcon from './common/ThreeVerticalDotsIcon';
 
 
 export {
@@ -63,5 +72,16 @@ export {
  ListIcon,
  SelectCategoryLayerIcon,
  SelectAdvanceFilterIcon,
+ BackArrowIcon,
+ SaveIcon,
+ AddIconRounded,
+ DaimandIcon,
+ DownloadIcon,
+ CheckCircle,
+ XcircleIcon,
+ PersonIcon,
+ ThreeVerticalDotsIcon,
+ 
+ 
  
 };

@@ -23,12 +23,20 @@ import JobDashboardScreen from '../../screen/JobSeeker/jobDashboardScreen';
 import JobPhoneVerificationScreen from '../../screen/authScreen/phoneVerificationjob/phoneVerification';
 import BrowseJobCandidateScreen from '../../screen/JobSeeker/BrowseJobCandidate/BrowseJobCandidateScreen';
 import BrowseJobCandidateFilter from '../../screen/JobSeeker/BrowseJobCandidateFilter/BrowseJobCandidateFilter';
+import ManageJobs from '../../screen/JobPostManagement/ManageJobs';
+import ManageJobsDetailsScreen from '../../screen/JobPostManagement/ManageJobsDetailsScreen';
+import ApplicationScreen from '../../screen/Application/ApplicationScreen';
+import CandidateProfileScreen from '../../screen/Application/CandidateProfileScreen';
+import JobEmployerViewScreen from '../../screen/JobPostManagement/JobEmployerViewScreen';
 
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={MainRoutes.HOME_SCREEN}
+      {/* <Stack.Navigator initialRouteName={MainRoutes.MANAGEJOBS_SCREEN} */}
+        {/* <Stack.Navigator initialRouteName={MainRoutes.APPLICATION_sCREEN } */}
+        {/* <Stack.Navigator initialRouteName={MainRoutes.JOBEMPLOYERVIEW_SCREEN  } */}
+       <Stack.Navigator initialRouteName={MainRoutes.HOME_SCREEN}
     screenOptions={{
     headerShown: false, // Hides the header entirely for all screens
   }}
@@ -58,6 +66,11 @@ const StackNavigation = () => {
             <Stack.Screen name={MainRoutes.YOU_ARE_ALL_SET} component={YouAreAllSetScreen} />
             <Stack.Screen name={MainRoutes.BROWSE_JOB_CANDIDATE_SCREEN} component={BrowseJobCandidateScreen} />
             <Stack.Screen name={MainRoutes.BROWSE_JOB_CANDIDATE_FILTER_SCREEN} component={BrowseJobCandidateFilter} />
+            <Stack.Screen name={MainRoutes.MANAGEJOBS_SCREEN} component={ManageJobs} />
+            <Stack.Screen name={MainRoutes.MANAGEJOBS_DETAILS_sCREEN} component={ManageJobsDetailsScreen} />
+            <Stack.Screen name={MainRoutes.APPLICATION_sCREEN} component={ApplicationScreen} />
+            <Stack.Screen name={MainRoutes.CANDIDATE_PROFILE_SCREEN} component={CandidateProfileScreen} />
+            <Stack.Screen name={MainRoutes.JOBEMPLOYERVIEW_SCREEN} component={JobEmployerViewScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
