@@ -30,10 +30,10 @@ const Header = ({greeting}) => {
         />
         <View style={styles.topRow}>
           <View style={{flexDirection: 'row', columnGap: 15}}>
-            <TouchableOpacity>
+            <TouchableOpacity style={{padding:10}} onPress={()=>NavigationService.openDrawer()}>
               <Icon name="menu" size={28} color="white" />
             </TouchableOpacity>
-            <View>
+            <View style={{marginTop:greeting?0:10}}>
               {greeting && <Text style={{color:'white',fontSize:15,marginTop:-5}}>Hello,</Text>}
               <Text style={styles.title}>Ninad Sathe</Text>
             </View>

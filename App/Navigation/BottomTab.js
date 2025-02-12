@@ -27,6 +27,7 @@ import Profile from '../Screen/Profile/Profile';
 import SingleCompanyEmp from '../Screen/Jobs/SingleCompanyEmp';
 import InviteApply from '../Screen/Jobs/InviteApply';
 import Chat from '../Screen/Inbox/Chat';
+import Settings from '../Screen/Settings/Settings';
 // import Svg, {Path} from 'react-native-svg';
 
 const Tab = createBottomTabNavigator();
@@ -170,6 +171,8 @@ const BottomTab = () => {
       />
       {/* <Tab.Screen name="Profile" component={ProfileScreen} /> */}
       <Tab.Screen name="Jobs" component={SavedJobs} />
+      <Tab.Screen name="SavedJobs" component={SavedJobs} />
+      <Tab.Screen name="AppliedJobs" component={AppliedJobs} />
       <Tab.Screen name="EditJobAlert" component={EditJobAlert} />
       <Tab.Screen name="JobDetails" component={JobDetails} />
       <Tab.Screen name="SingleCompanyEmp" component={SingleCompanyEmp} />
@@ -177,6 +180,7 @@ const BottomTab = () => {
       <Tab.Screen name="ApplicationDetails" component={ApplicationDetails} />
       {/* <Tab.Screen name="Chat" component={Chat} /> */}
       <Tab.Screen name="Interviews" component={Interviews} />
+      <Tab.Screen name="Settings" component={Settings} />
       {/* <Tab.Screen name="Interviews" component={Interviews} /> */}
     </Tab.Navigator>
     // </NavigationContainer>
